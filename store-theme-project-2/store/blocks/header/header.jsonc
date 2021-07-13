@@ -9,11 +9,11 @@
     "children": [
       "flex-layout.row#1-desktop",
       "flex-layout.row#2-desktop",
+      "menu-project-2",
       "flex-layout.row#3-desktop",
       "sticky-layout#4-desktop"
     ]
   },
-
   "flex-layout.row#1-desktop": {
     "children": ["telemarketing"],
     "props": {

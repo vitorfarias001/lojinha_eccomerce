@@ -1,17 +1,12 @@
 {
-  "version": "0.0.0",
-  "name": "CHANGE_ME",
+  "name": "afdfasf",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "lint": "eslint --fix --ext js,jsx,ts,tsx .",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
     "lint:locales": "intl-equalizer",
     "test": "cd ./react && yarn test"
-  },
-  "intl-equalizer": {
-    "referenceLocale": "en",
-    "localeDirectory": "messages"
   },
   "husky": {
     "hooks": {
@@ -20,7 +15,9 @@
   },
   "lint-staged": {
     "*.{ts,js,tsx,jsx}": [
-      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
       "prettier --write"
     ],
     "*.json": [
@@ -40,5 +37,11 @@
     "lint-staged": "^10.5.1",
     "prettier": "^2.2.0",
     "typescript": "^3.9.6"
-  }
+  },
+  "version": "0.0.0",
+  "intl-equalizer": {
+    "referenceLocale": "en",
+    "localeDirectory": "messages"
+  },
+  "dependencies": {}
 }

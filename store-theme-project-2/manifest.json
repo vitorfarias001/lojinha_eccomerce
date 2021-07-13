@@ -1,6 +1,6 @@
 {
-  "vendor": "vtex",
-  "name": "store-theme",
+  "vendor": "avantivtexio",
+  "name": "ic2-store-theme-project-2",
   "version": "4.4.0",
   "builders": {
     "styles": "2.x",
@@ -60,7 +60,8 @@
     "vtex.store-form": "0.x",
     "vtex.product-highlights": "2.x",
     "vtex.product-specifications": "1.x",
-    "vtex.tab-layout": "0.x"
+    "vtex.tab-layout": "0.x",
+    "avantivtexio.ic2-project-2-shelf": "0.x"
   },
   "peerDependencies": {
     "vtex.reviews-and-ratings": "2.x"
