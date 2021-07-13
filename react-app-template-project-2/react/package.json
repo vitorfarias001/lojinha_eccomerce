@@ -26,9 +26,10 @@
     "@vtex/test-tools": "^3.3.2",
     "@vtex/tsconfig": "^0.4.4",
     "apollo-cache-inmemory": "^1.6.5",
-    "avantivtexio.ic2-project-2-shelf": "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-shelf@0.0.0+build1626197293/public/@types/avantivtexio.ic2-project-2-shelf",
+    "avantivtexio.ic2-project-2-app": "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626208397/public/@types/avantivtexio.ic2-project-2-app",
     "graphql": "^14.6.0",
     "typescript": "3.9.7",
+    "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.4/public/@types/vtex.css-handles",
     "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.130.0/public/@types/vtex.render-runtime"
   }
 }

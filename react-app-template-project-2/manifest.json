@@ -1,7 +1,7 @@
 {
   "vendor": "avantivtexio",
-  "name": "ic2-project-2-shelf",
-  "version": "0.0.0",
+  "name": "ic2-project-2-app",
+  "version": "0.1.0",
   "title": "Shelf ic2-project-2",
   "description": "Description",
   "builders": {
@@ -10,7 +10,10 @@
     "docs": "0.x",
     "store": "0.x"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vtex.css-handles": "0.x",
+    "vtex.styleguide": "9.x"
+  },
   "registries": ["smartcheckout"],
   "policies": [],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
