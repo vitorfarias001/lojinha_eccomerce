@@ -43,5 +43,7 @@
     "referenceLocale": "en",
     "localeDirectory": "messages"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@vtex/styleguide": "^9.145.1"
+  }
 }

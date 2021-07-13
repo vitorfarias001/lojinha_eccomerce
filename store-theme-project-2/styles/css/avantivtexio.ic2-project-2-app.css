@@ -1,0 +1,35 @@
+/* Menu App */
+.menuContainer {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+/* Menu Store Theme */
+.container--headerDeskSticky {
+  background: white;
+}
+
+.flexRow--headerDeskMainRow {
+  max-width: 908px;
+  margin: 0 auto;
+}
+
+/*NEWSLETTER*/
+.newsletter {
+  height: 100px;
+}
+.newsletterTitle {
+  position: relative;
+  letter-spacing: 6px;
+  color: #1b4d9b;
+  font-size: 24px;
+  font-weight: bold;
+  left: 400px;
+}
+
+.newsletterSubTitle {
+  position: relative;
+  left: 400px;
+  font-size: 14px;
+  color: #202020;
+}

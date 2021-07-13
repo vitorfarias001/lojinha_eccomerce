@@ -4,5 +4,8 @@
   },
   "menu-project-2": {
     "component": "Menu"
+  },
+  "newsletter-project-2": {
+    "component": "Newsletter"
   }
 }
