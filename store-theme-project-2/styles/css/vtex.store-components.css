@@ -1,3 +1,78 @@
+/* Store theme header */
+.container,
+.searchBarContainer {
+  padding: 0;
+}
+
+.searchBarInnerContainer--headerDesk {
+  width: 512px;
+}
+.searchBarInnerContainer--headerDesk
+  .autoCompleteOuterContainer--headerDesk
+  :global(.vtex-input-prefix__group) {
+  height: 40px;
+  border: none;
+  box-shadow: 0px 0px 8px #00000029;
+}
+
+.searchBarInnerContainer--headerDesk
+  .autoCompleteOuterContainer--headerDesk
+  :global(.vtex-input-prefix__group)
+  :global(.vtex-styleguide-9-x-input) {
+    padding-left: 19px;
+  }
+
+.searchBarInnerContainer--headerDesk
+  .autoCompleteOuterContainer--headerDesk
+  :global(.vtex-input-prefix__group)
+  :global(.vtex-styleguide-9-x-input)::placeholder {
+    color: #4F4F4F;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+.autoCompleteOuterContainer--headerDesk :global(.vtex-input__suffix) {
+  padding: 0;
+  background: #5b6d62;
+  min-width: 111px;
+  border-radius: 0;
+  position: relative;
+}
+
+.autoCompleteOuterContainer--headerDesk
+  :global(.vtex-input__suffix)
+  :global(.vtex__icon-search) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 111px;
+}
+
+.autoCompleteOuterContainer--headerDesk
+  :global(.vtex-input__suffix)
+  :global(.vtex__icon-search) {
+  color: transparent;
+  fill: transparent;
+}
+
+.autoCompleteOuterContainer--headerDesk
+  :global(.vtex-input__suffix)
+  :nth-child(odd) {
+  height: 100%;
+  width: 100%;
+  border-width: 0;
+}
+
+.autoCompleteOuterContainer--headerDesk
+  :global(.vtex-input__suffix)
+  :nth-child(even)::after {
+  content: "OK";
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 43px;
+}
+
 .notificationBarContainer {
   background-color: #e6f1e6;
   color: #03034e;
@@ -19,7 +94,7 @@
   margin: 0 auto;
 }
 
-.newsletter .container {
+.newsletter {
   padding: 60px 10px;
 }
 

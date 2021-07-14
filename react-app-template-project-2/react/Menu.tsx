@@ -2,16 +2,13 @@ import React, { useEffect, useState } from 'react'
 
 import { useCssHandles } from 'vtex.css-handles'
 
+import MenuItem from './components/menu/MenuItem'
+
 import axios from 'axios'
 
-const CSS_HANDLES = [
-  'menuContainer',
-  'categoryContainer',
-  'categoryLink',
-  'categoryName',
-] as const
+const CSS_HANDLES = ['menuContainer'] as const
 
-import { IDepartment } from './typings/IMenu'
+import { IDepartment } from './typings/menu'
 
 const MENU_QUANTITY = 4
 
@@ -26,7 +23,7 @@ const Menu = () => {
     const fetchAllCategories = async () => {
       const data = await axios.get('/api/catalog_system/pub/category/tree/2')
       setAllCategories(data.data)
-      setCategories(data.data.slice(0, MENU_QUANTITY))
+      setCategories(data.data.slice(MENU_QUANTITY, data.data.lenght))
       setIsLoading(false)
     }
     fetchAllCategories()
@@ -38,13 +35,7 @@ const Menu = () => {
       {!isLoading && (
         <div className={handles.menuContainer}>
           {categories?.map((category) => {
-            return (
-              <div key={category.id} className={handles.categoryContainer}>
-                <a href={`${category.name}`} className={handles.categoryLink}>
-                  <div className={handles.categoryName}>{category.name}</div>
-                </a>
-              </div>
-            )
+            return <MenuItem key={category.id} category={category} />
           })}
         </div>
       )}

@@ -6,9 +6,10 @@
     }
   },
 
-  "minicart.v2": {
+  "minicart.v2#headerDesk": {
     "props": {
-      "customPixelEventId": "add-to-cart-button"
+      "customPixelEventId": "add-to-cart-button",
+      "blockClass": "headerDesk"
     },
     "children": ["minicart-base-content"]
   }

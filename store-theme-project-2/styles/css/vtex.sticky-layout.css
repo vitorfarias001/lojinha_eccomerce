@@ -1,0 +1,9 @@
+/* Menu Store Theme */
+.container--headerDeskSticky {
+  background: white;
+
+  height: 136px;
+
+  display: flex;
+  align-items: center;
+}

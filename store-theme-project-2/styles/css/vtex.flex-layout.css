@@ -1,3 +1,26 @@
+/* Store theme header */
+.flexRow--headerDeskMainRow {
+  width: 908px;
+  margin: 0 auto;
+}
+
+.flexRowContent--headerDesk-1 {
+  height: 40px;
+  justify-content: space-between;
+}
+.flexRow--headerDesk-1
+.flexRowContent--headerDesk-1
+  :global(.vtex-store-components-3-x-searchBarContainer) {
+
+  display: flex;
+  align-items: center;
+}
+
+.flexCol--headerDeskMainCol {
+  gap: 16px;
+}
+
+/* Store theme default*/
 .flexRowContent--menu-link,
 .flexRowContent--main-header {
   padding: 0 0.5rem;
