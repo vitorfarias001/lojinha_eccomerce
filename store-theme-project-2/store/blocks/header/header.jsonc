@@ -38,20 +38,35 @@
       "preventVerticalStretch": true,
       "fullWidth": true
     },
-    "children": ["flex-layout.col#logo-desktop", "search-bar", "minicart.v2"]
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "search-bar#headerDesk",
+      "minicart.v2#headerDesk"
+    ]
   },
   "flex-layout.col#logo-desktop": {
     "props": {
-      "verticalAlign": "middle"
+      "verticalAlign": "middle",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
     },
     "children": ["logo#desktop"]
   },
   "logo#desktop": {
     "props": {
       "title": "Logo",
+      "blockClass": "logoDesktop",
       "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo.png",
-      "width": "180"
+      "url": "assets/images/logo-avanti-com-slogan.png",
+      "width": "127"
+    }
+  },
+  "search-bar#headerDesk": {
+    "props": {
+      "blockClass": "headerDesk",
+      "displayMode": "search-and-clear-buttons",
+      "inputType": "search",
+      "placeholder": "O que procura?"
     }
   },
   "header-layout.mobile": {

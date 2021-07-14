@@ -11,7 +11,7 @@ const CSS_HANDLES = [
   'categoryName',
 ] as const
 
-import { IDepartment } from './typings/IMenu'
+import { IDepartment } from './typings/menu'
 
 const MENU_QUANTITY = 4
 

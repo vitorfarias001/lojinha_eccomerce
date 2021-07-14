@@ -1762,9 +1762,9 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-"avantivtexio.ic2-project-2-app@https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626208397/public/@types/avantivtexio.ic2-project-2-app":
+"avantivtexio.ic2-project-2-app@https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626276618/public/@types/avantivtexio.ic2-project-2-app":
   version "0.1.0"
-  resolved "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626208397/public/@types/avantivtexio.ic2-project-2-app#a32393770f9c74f0050ca9806b6da0503f708b7f"
+  resolved "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626276618/public/@types/avantivtexio.ic2-project-2-app#42a2214c470f41829c075f22c7961968e9cf8185"
 
 aws-sign2@~0.7.0:
   version "0.7.0"
@@ -4969,6 +4969,10 @@ verror@1.10.0:
 "vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.130.0/public/@types/vtex.render-runtime":
   version "8.130.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.130.0/public/@types/vtex.render-runtime#6958e1017c423c0906eae3500bad70d3fb353a98"
+
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.145.0/public/@types/vtex.styleguide":
+  version "9.145.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.145.0/public/@types/vtex.styleguide#41dfb32af8756eb5528dbd452e47003a8f67fe8c"
 
 w3c-hr-time@^1.0.1:
   version "1.0.2"
