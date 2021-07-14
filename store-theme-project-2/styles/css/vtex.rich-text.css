@@ -66,7 +66,23 @@
   font-size: 28px;
   font-weight: 700;
 }
+.container--text{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 73px;
+  margin-top: 73px;
+}
 
+.wrapper--text{
+  width: 864px;
+}
+
+.paragraph--text{
+  display: flex;
+  text-align: center;
+  width: 938px;
+  color: #707070;
+}
 @media only screen and (min-width: 640px) {
   .container--question .strong {
     font-size: 40px;

@@ -5,8 +5,9 @@
   justify-content: center;
 }
 
-.categoryLink {
+.categoryName, .categoryLink{
   text-decoration: none;
+
   display: block;
 
   color: #4F4F4F;
@@ -15,6 +16,13 @@
   line-height: 22px;
 }
 
+.subMenuContainer {
+  position: absolute;
+}
+
+.subMenuContainer {
+  display: block;
+}
 
 /*NEWSLETTER*/
 .newsletterContainer{
