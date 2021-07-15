@@ -5,27 +5,88 @@
   justify-content: center;
 }
 
-.categoryName, .categoryLink{
+.categoryName,
+.categoryLink {
   text-decoration: none;
 
   display: block;
 
-  color: #4F4F4F;
+  color: #4f4f4f;
   font-size: 16px;
   font-weight: 600;
   line-height: 22px;
+
+  padding: 5px;
+  cursor: pointer;
 }
 
 .subMenuContainer {
   position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: flex;
+  width: 100%;
+  height: 225px;
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+  box-shadow: 0px 4px 8px #0000001f;
 }
 
-.subMenuContainer {
+.subMenuContent {
+  width: 908px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subMenuItemsContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  flex-wrap: wrap;
+  row-gap: 6px;
+  column-gap: 45px;
+
+  height: 112px;
+  width: 303px;
+  margin-left: 266px;
+}
+
+.subMenuItem {
+  height: 22px;
+  width: 70px;
+}
+
+.subMenuLink {
+  text-decoration: none;
+  color: #4f4f4f;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 19px;
+
   display: block;
+  width: 100%;
+  height: 100%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subMenuImage {
+  width: 184px;
+  height: 172px;
+  background: url("assets/images/mulher.png");
+  background-size: cover;
 }
 
 /*NEWSLETTER*/
-.newsletterContainer{
+.newsletterContainer {
   display: flex;
   justify-content: center;
   text-align: left;
@@ -48,7 +109,7 @@
   color: #202020;
 }
 
-.newsletterContainer :global(.vtex-input){
+.newsletterContainer :global(.vtex-input) {
   width: 213px;
   height: 51px;
   margin-left: 36px;
@@ -56,28 +117,27 @@
   top: -15px;
 }
 
-.placeholderContainer{
+.placeholderContainer {
   display: flex;
-  margin-right: 36px
-}
-.placeholderName{
   margin-right: 36px;
 }
-.placeholderEmail{
+.placeholderName {
+  margin-right: 36px;
+}
+.placeholderEmail {
   margin-right: 36px;
 }
 
-.vtex-input-prefix__group{
+.vtex-input-prefix__group {
   width: 213px;
   height: 51px;
 }
 
-.buttonContent :global(.vtex-button){
+.buttonContent :global(.vtex-button) {
   width: 144px;
   height: 51px;
 }
 
-
-.buttonContent :global(.vtex-button__label){
+.buttonContent :global(.vtex-button__label) {
   font-weight: bold;
 }

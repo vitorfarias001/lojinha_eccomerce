@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/aria-role */
 import React, { useState, useEffect } from 'react'
-
 import { useCssHandles } from 'vtex.css-handles'
 
 import { IDepartment } from '../../typings/menu'
-
 import SubMenu from './SubMenu'
 
 interface MenuItemProps {
@@ -24,18 +25,23 @@ const MenuItem = ({ category }: MenuItemProps) => {
 
   useEffect(() => {
     if (category.hasChildren) setSubCategories(category.children)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const showSub = () => {
-    console.log('Category', category)
-    console.log('Sub', subCategories)
-    setShowSubMenu(true)
+    /*     console.log('Category', category)
+    console.log('Sub', subCategories) */
+    setShowSubMenu(!showSubMenu)
   }
 
   return (
     <div className={handles.categoryContainer}>
       {category.hasChildren ? (
-        <div className={handles.categoryName} onClick={showSub}>
+        <div
+          role="Link"
+          className={handles.categoryName}
+          onMouseEnter={showSub}
+        >
           {category.name}
         </div>
       ) : (
@@ -47,7 +53,9 @@ const MenuItem = ({ category }: MenuItemProps) => {
           {category.name}
         </a>
       )}
-      {showSubMenu && <SubMenu subCategories={subCategories} />}
+      {showSubMenu && (
+        <SubMenu subCategories={subCategories} showSub={showSub} />
+      )}
     </div>
   )
 }

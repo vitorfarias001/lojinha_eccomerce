@@ -9,15 +9,14 @@
   justify-content: space-between;
 }
 .flexRow--headerDesk-1
-.flexRowContent--headerDesk-1
+  .flexRowContent--headerDesk-1
   :global(.vtex-store-components-3-x-searchBarContainer) {
-
   display: flex;
   align-items: center;
 }
 
 .flexCol--headerDeskMainCol {
-  gap: 16px;
+  gap: 11px;
 }
 
 /* Store theme default*/
