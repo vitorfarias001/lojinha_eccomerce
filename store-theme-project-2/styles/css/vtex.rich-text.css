@@ -76,12 +76,25 @@
 .wrapper--text{
   width: 864px;
 }
+.wrapper--text-shelf{
+  display: flex;
+  width: 1900px;
+  justify-content: center;
+}
 
 .paragraph--text{
   display: flex;
   text-align: center;
   width: 938px;
   color: #707070;
+}
+
+.paragraph--text-shelf{
+  font-weight: bold;
+  font-size: 35px;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 57px;
+  margin-top: 57px;
 }
 @media only screen and (min-width: 640px) {
   .container--question .strong {
