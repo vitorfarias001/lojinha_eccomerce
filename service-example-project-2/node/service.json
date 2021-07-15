@@ -9,6 +9,10 @@
     "status": {
       "path": "/_v/status/:code",
       "public": true
+    },
+    "teste":{
+      "path":"",
+      "public": true
     }
   }
 }

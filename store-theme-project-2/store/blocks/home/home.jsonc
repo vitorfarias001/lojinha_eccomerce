@@ -6,10 +6,8 @@
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "__fold__.experimentalLazyAssets",
       "flex-layout.row#deals",
+      "rich-text#txt-shelf",
       "avantivtexio.ic2-project-2-app:shelf",
-      "rich-text#shelf-title",
-      "flex-layout.row#shelf",
-      "info-card#home",
       "rich-text#txt",
       "newsletter-project-2"
     ]
@@ -73,20 +71,13 @@
     }
   },
 
-  "info-card#home": {
-    "props": {
-      "id": "info-card-home",
-      "isFullModeStyle": false,
-      "textPosition": "left",
-      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
-      "headline": "Clearance Sale",
-      "callToActionText": "DISCOVER",
-      "callToActionUrl": "/sale/d",
-      "blockClass": "info-card-home",
-      "textAlignment": "center"
+
+  "rich-text#txt-shelf":{
+    "props":{
+      "text":"Os Mais Vendidos",
+      "blockClass":"text-shelf"
     }
   },
-
   "rich-text#txt": {
     "props": {
       "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, expedita! Neque, saepe. Doloribus quam, dolores, nemo, quae alias deserunt cumque pariatur dolore adipisci ullam repudiandae voluptatibus sed fugit sapiente architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, expedita! Neque, saepe. Doloribus quam, dolores, nemo, quae alias deserunt cumque pariatur dolore adipisci ullam repudiandae voluptatibus sed fugit sapiente architecto!",

@@ -81,3 +81,49 @@
 .buttonContent :global(.vtex-button__label){
   font-weight: bold;
 }
+
+/*SHELF (4)*/
+
+.sliderLayoutContainer{
+  width: 1070px;
+  display: flex;
+}
+.paginationDotsContainer{
+  display: none;
+}
+
+.sliderLeftArrow{
+  display: none;
+}
+.sliderRightArrow{
+  display: none;
+}
+.shelfContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.subtitleContent{
+  width: 150px;
+}
+
+.buttonContainer :global(.vtex-button){
+  width: 200px;
+  height: 38px;
+  background: #008939;
+  border-color: #008939;
+  font-weight: bold;
+}
+.countContainer{
+  display: flex;
+  justify-content: center;
+}
+.countContainer :global(.vtex-button){
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.inputCount{
+  width: 100px;
+}
