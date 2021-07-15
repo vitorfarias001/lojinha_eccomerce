@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-use-before-define
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 
 import { IDepartment } from '../../typings/menu'
@@ -21,8 +21,28 @@ const CSS_HANDLES = [
 const SubMenu = ({ subCategories, showSub }: SubMenuProps) => {
   const handles = useCssHandles(CSS_HANDLES)
 
+  const changeCss = () => {
+    const subMenuContainer = document.querySelector(
+      `.${handles.subMenuContainer}`
+    ) as HTMLDivElement
+
+    subMenuContainer.style.display = 'flex'
+    setTimeout(() => {
+      subMenuContainer.style.opacity = '1'
+    }, 50)
+  }
+
+  useEffect(() => {
+    changeCss()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
-    <div className={handles.subMenuContainer} onMouseLeave={() => showSub()}>
+    <div
+      className={handles.subMenuContainer}
+      onMouseLeave={window.innerWidth > 1024 ? () => showSub() : undefined}
+      onLoad={changeCss}
+    >
       <div className={handles.subMenuContent}>
         <div className={handles.subMenuItemsContainer}>
           {subCategories.map((subCategory) => {

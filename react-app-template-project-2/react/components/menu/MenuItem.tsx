@@ -41,7 +41,8 @@ const MenuItem = ({ category }: MenuItemProps) => {
         <div
           role="Link"
           className={handles.categoryName}
-          onMouseEnter={showSub}
+          onMouseEnter={window.innerWidth > 1024 ? showSub : undefined}
+          onClick={window.innerWidth <= 1024 ? showSub : undefined}
         >
           {category.name}
         </div>
