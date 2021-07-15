@@ -1,0 +1,14 @@
+.openIconContainer--headerMobile {
+  padding: 0;
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #df2f1a;
+
+  box-shadow: 0px 0px 8px #00000040;
+  border-radius: 4px;
+}

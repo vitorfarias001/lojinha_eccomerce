@@ -73,29 +73,29 @@
     "children": ["sticky-layout#1-mobile"]
   },
   "sticky-layout#1-mobile": {
+    "props": {
+      "blockClass": "headerMobileSticky"
+    },
     "children": ["flex-layout.row#1-mobile"]
   },
   "flex-layout.row#1-mobile": {
-    "children": ["drawer", "logo#mobile", "login", "minicart.v2"],
     "props": {
-      "blockClass": "main-header-mobile",
+      "blockClass": "header1RowMobile",
       "preventHorizontalStretch": true,
       "preserveLayoutOnMobile": true,
       "fullWidth": true
-    }
-  },
-  "drawer": {
-    "children": ["menu#drawer"]
-  },
-  "menu#drawer": {
+    },
     "children": [
-      "menu-item#category-apparel",
-      "menu-item#category-home",
-      "menu-item#more"
-    ],
+      "drawer#headerMobile",
+      "logo#desktop",
+      "minicart.v2#headerMobile"
+    ]
+  },
+  "drawer#headerMobile": {
     "props": {
-      "orientation": "vertical"
-    }
+      "blockClass": "headerMobile"
+    },
+    "children": ["menu-project-2"]
   },
   "logo#mobile": {
     "props": {

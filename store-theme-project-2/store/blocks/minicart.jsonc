@@ -5,11 +5,17 @@
       "customPixelEventId": "add-to-cart-button"
     }
   },
-
   "minicart.v2#headerDesk": {
     "props": {
       "customPixelEventId": "add-to-cart-button",
       "blockClass": "headerDesk"
+    },
+    "children": ["minicart-base-content"]
+  },
+  "minicart.v2#headerMobile": {
+    "props": {
+      "customPixelEventId": "add-to-cart-button",
+      "blockClass": ["headerDesk", "headerMobile"]
     },
     "children": ["minicart-base-content"]
   }
