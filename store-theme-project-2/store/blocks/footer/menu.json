@@ -1,27 +1,21 @@
 {
-  "vtex.menu@2.x:menu#Products": {
+  "vtex.menu@2.x:menu#categorias": {
     "props": {
       "orientation": "vertical"
     },
-    "children": [
-      "menu-item#news",
-      "menu-item#blackfriday",
-      "menu-item#sale",
-      "menu-item#personalization"
-    ]
+    "children": ["menu-item#categoriasTitle", "menu-footer-project-2"]
   },
-  "menu-item#news": {
+  "menu-item#categoriasTitle": {
     "props": {
-      "id": "menu-item-news",
+      "id": "foote-item-title",
       "type": "custom",
       "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
         "href": "#",
-        "noFollow": false,
-        "tagTitle": "News",
-        "text": "News"
+        "tagTitle": "Categorias",
+        "text": "Categorias"
       }
     }
   },

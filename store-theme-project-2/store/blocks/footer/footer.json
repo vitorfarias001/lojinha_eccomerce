@@ -5,26 +5,15 @@
   "footer-layout.desktop": {
     "children": [
       "flex-layout.row#footer-1-desktop",
-      "flex-layout.row#footer-2-desktop",
-      "flex-layout.row#footer-3-desktop"
+      "flex-layout.row#footer-2-desktop"
     ]
   },
   "flex-layout.row#footer-1-desktop": {
-    "children": [
-      "vtex.menu@2.x:menu#Products",
-      "vtex.menu@2.x:menu#footer-clothing",
-      "vtex.menu@2.x:menu#footer-decoration",
-      "vtex.menu@2.x:menu#footer-bags",
-      "footer-spacer",
-      "social-networks"
-    ],
+    "children": ["vtex.menu@2.x:menu#categorias", "social-networks"],
     "props": {
-      "blockClass": "menu-row",
-      "paddingTop": 6,
-      "paddingBottom": 3
+      "blockClass": "footer1Row"
     }
   },
-
   "social-networks": {
     "props": {
       "socialNetworks": [
@@ -47,20 +36,7 @@
       ]
     }
   },
-
   "flex-layout.row#footer-2-desktop": {
-    "children": ["accepted-payment-methods"],
-    "props": {
-      "blockClass": "payment-methods"
-    }
-  },
-  "accepted-payment-methods": {
-    "props": {
-      "paymentMethods": ["MasterCard", "Visa", "Diners Club"]
-    }
-  },
-
-  "flex-layout.row#footer-3-desktop": {
     "children": ["rich-text#footer"],
     "props": {
       "blockClass": "credits"

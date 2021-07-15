@@ -10,15 +10,17 @@ import SubMenu from './SubMenu'
 
 interface MenuItemProps {
   category: IDepartment
+  footer: boolean
 }
 
 const CSS_HANDLES = [
   'categoryContainer',
   'categoryLink',
   'categoryName',
+  'footerCategoryName',
 ] as const
 
-const MenuItem = ({ category }: MenuItemProps) => {
+const MenuItem = ({ category, footer }: MenuItemProps) => {
   const handles = useCssHandles(CSS_HANDLES)
 
   const [showSubMenu, setShowSubMenu] = useState<boolean>(false)
@@ -37,18 +39,22 @@ const MenuItem = ({ category }: MenuItemProps) => {
 
   return (
     <div className={handles.categoryContainer}>
-      {category.hasChildren ? (
+      {category.hasChildren || footer ? (
         <div
           role="Link"
-          className={handles.categoryName}
-          onMouseEnter={window.innerWidth > 1024 ? showSub : undefined}
-          onClick={window.innerWidth <= 1024 ? showSub : undefined}
+          className={footer ? handles.footerCategoryName : handles.categoryName}
+          onMouseEnter={
+            footer ? undefined : window.innerWidth > 1024 ? showSub : undefined
+          }
+          onClick={
+            footer ? undefined : window.innerWidth <= 1024 ? showSub : undefined
+          }
         >
           {category.name}
         </div>
       ) : (
         <a
-          className={handles.categoryLink}
+          className={footer ? handles.footerCategoryName : handles.categoryName}
           href={category.url}
           onClick={showSub}
         >

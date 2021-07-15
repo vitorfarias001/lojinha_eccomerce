@@ -5,6 +5,9 @@
   "menu-project-2": {
     "component": "Menu"
   },
+  "menu-footer-project-2": {
+    "component": "MenuFooter"
+  },
   "newsletter-project-2": {
     "component": "Newsletter"
   }
