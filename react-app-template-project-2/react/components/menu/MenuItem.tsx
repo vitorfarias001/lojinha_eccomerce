@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/aria-role */
+// eslint-disable-next-line no-use-before-define
 import React, { useState, useEffect } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 

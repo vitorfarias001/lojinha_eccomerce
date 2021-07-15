@@ -1,14 +1,12 @@
+// eslint-disable-next-line no-use-before-define
 import React, { useEffect, useState } from 'react'
-
 import { useCssHandles } from 'vtex.css-handles'
-
-import MenuItem from './components/menu/MenuItem'
-
 import axios from 'axios'
 
-const CSS_HANDLES = ['menuContainer'] as const
-
+import MenuItem from './components/menu/MenuItem'
 import { IDepartment } from './typings/menu'
+
+const CSS_HANDLES = ['menuContainer'] as const
 
 const MENU_QUANTITY = 4
 
@@ -22,14 +20,20 @@ const Menu = () => {
   useEffect(() => {
     const fetchAllCategories = async () => {
       const data = await axios.get('/api/catalog_system/pub/category/tree/2')
+
       setAllCategories(data.data)
       setCategories(data.data.slice(MENU_QUANTITY, data.data.lenght))
       setIsLoading(false)
     }
+
     fetchAllCategories()
   }, [])
+
+  // eslint-disable-next-line no-console
   console.log('All', allCategories)
+  // eslint-disable-next-line no-console
   console.log('Sliced', categories)
+
   return (
     <>
       {!isLoading && (
