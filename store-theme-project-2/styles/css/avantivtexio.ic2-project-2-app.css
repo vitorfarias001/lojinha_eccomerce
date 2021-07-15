@@ -25,7 +25,11 @@
   top: 100%;
   left: 0;
 
-  display: flex;
+  display: none;
+  opacity: 0;
+
+  transition: 0.5s ease-in-out;
+  /* Will be changed to apply a transitions */
   width: 100%;
   height: 225px;
   justify-content: center;
@@ -83,6 +87,41 @@
   height: 172px;
   background: url("assets/images/mulher.png");
   background-size: cover;
+}
+
+@media only screen and (max-width: 1024px) {
+  .menuContainer {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 13px;
+  }
+  .subMenuContainer {
+    position: relative;
+    /*display: block;*/
+    top: 0;
+    height: auto;
+    box-shadow: none;
+    padding-left: 15px;
+  }
+  .subMenuContent {
+    width: 100%;
+  }
+  .subMenuItemsContainer {
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+    align-content: start;
+  }
+  .subMenuItem {
+    width: 100%;
+  }
+  .subMenuLink {
+    font-size: 16px;
+  }
+  .subMenuImage {
+    display: none;
+  }
 }
 
 /*NEWSLETTER*/
