@@ -7,6 +7,11 @@
 .searchBarInnerContainer--headerDesk {
   width: 512px;
 }
+
+.searchBarInnerContainer--headerMobile {
+  width: 374px;
+}
+
 .searchBarInnerContainer--headerDesk
   .autoCompleteOuterContainer--headerDesk
   :global(.vtex-input-prefix__group) {
@@ -19,17 +24,18 @@
   .autoCompleteOuterContainer--headerDesk
   :global(.vtex-input-prefix__group)
   :global(.vtex-styleguide-9-x-input) {
-    padding-left: 19px;
-  }
+  padding-left: 19px;
+}
 
 .searchBarInnerContainer--headerDesk
   .autoCompleteOuterContainer--headerDesk
   :global(.vtex-input-prefix__group)
   :global(.vtex-styleguide-9-x-input)::placeholder {
-    color: #4F4F4F;
-    font-size: 13px;
-    font-weight: bold;
-  }
+  color: #4f4f4f;
+  font-size: 13px;
+  font-weight: bold;
+  opacity: 1;
+}
 
 .autoCompleteOuterContainer--headerDesk :global(.vtex-input__suffix) {
   padding: 0;
@@ -37,6 +43,10 @@
   min-width: 111px;
   border-radius: 0;
   position: relative;
+}
+
+.searchBarInnerContainer--headerMobile :global(.vtex-input__suffix) {
+  min-width: 47px;
 }
 
 .autoCompleteOuterContainer--headerDesk
@@ -55,6 +65,13 @@
   fill: transparent;
 }
 
+.autoCompleteOuterContainer--headerMobile
+  :global(.vtex-input__suffix)
+  :global(.vtex__icon-search) {
+  color: white;
+  fill: white;
+}
+
 .autoCompleteOuterContainer--headerDesk
   :global(.vtex-input__suffix)
   :nth-child(odd) {
@@ -65,12 +82,63 @@
 
 .autoCompleteOuterContainer--headerDesk
   :global(.vtex-input__suffix)
+  :nth-child(even) {
+  border-width: 0;
+}
+
+.autoCompleteOuterContainer--headerMobile
+  :global(.vtex-input__suffix)
+  :nth-child(odd) {
+  height: 16px;
+  width: 16px;
+  left: calc(50% - 8px);
+  top: calc(50% - 8px);
+}
+
+.autoCompleteOuterContainer--headerDesk
+  :global(.vtex-input__suffix)
+  :global(.vtex__icon-clear) {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: -30%;
+  height: 16px;
+  width: 16px;
+}
+
+.autoCompleteOuterContainer--headerMobile
+  :global(.vtex-input__suffix)
+  :global(.vtex__icon-clear) {
+  position: absolute;
+  left: -55%;
+}
+
+.autoCompleteOuterContainer--headerDesk
+  :global(.vtex-input__suffix)
   :nth-child(even)::after {
   content: "OK";
   color: #fff;
   position: absolute;
   top: 10px;
   left: 43px;
+}
+
+.autoCompleteOuterContainer--headerMobile
+  :global(.vtex-input__suffix)
+  :nth-child(even)::after {
+  content: "";
+}
+
+.logoLink--logoDesktop {
+  height: 44px;
+}
+
+/* Home */
+.imageElement--homeBannerMobile {
+  width: 100%;
+}
+
+.imageElement--homeBanner2Mobile {
+  width: 378px;
 }
 
 .notificationBarContainer {

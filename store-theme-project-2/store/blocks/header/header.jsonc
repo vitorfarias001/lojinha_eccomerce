@@ -76,7 +76,7 @@
     "props": {
       "blockClass": "headerMobileSticky"
     },
-    "children": ["flex-layout.row#1-mobile"]
+    "children": ["flex-layout.row#1-mobile", "flex-layout.row#2-mobile"]
   },
   "flex-layout.row#1-mobile": {
     "props": {
@@ -103,6 +103,23 @@
       "href": "/",
       "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
       "width": "70"
+    }
+  },
+  "flex-layout.row#2-mobile": {
+    "props": {
+      "blockClass": "header2RowMobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": ["search-bar#headerMobile"]
+  },
+  "search-bar#headerMobile": {
+    "props": {
+      "blockClass": ["headerDesk", "headerMobile"],
+      "displayMode": "search-and-clear-buttons",
+      "inputType": "search",
+      "placeholder": "O que procura?"
     }
   }
 }
