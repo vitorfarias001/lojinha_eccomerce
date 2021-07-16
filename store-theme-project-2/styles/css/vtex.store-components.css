@@ -132,6 +132,15 @@
   height: 44px;
 }
 
+/* Home */
+.imageElement--homeBannerMobile {
+  width: 100%;
+}
+
+.imageElement--homeBanner2Mobile {
+  width: 378px;
+}
+
 .notificationBarContainer {
   background-color: #e6f1e6;
   color: #03034e;
