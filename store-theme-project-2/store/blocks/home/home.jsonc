@@ -1,18 +1,33 @@
 {
   "store.home": {
     "blocks": [
-      "list-context.image-list#demo",
-      /* You can make references to blocks defined in other files.
-       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
-      "__fold__.experimentalLazyAssets",
-      "flex-layout.row#deals",
-      "rich-text#txt-shelf",
-      "Shelf",
-      "rich-text#txt",
+      "responsive-layout.desktop#home",
+      "responsive-layout.mobile#home"
+    ]
+  },
+  "responsive-layout.desktop#home": {
+    "children": [
+      /* "list-context.image-list#demo", */
+      "flex-layout.row#homeBannerDeskRow",
+      "rich-text#homeTxtShelf1Desk",
+      "flex-layout.row#shelf",
+      "avantivtexio.ic2-project-2-app:shelf",
+      "flex-layout.row#homeBannerDeskRow",
+      "rich-text#homeTxtShelf2Desk",
+      "flex-layout.row#shelf",
+      "avantivtexio.ic2-project-2-app:shelf",
       "newsletter-project-2"
     ]
   },
-
+  "flex-layout.row#homeBannerDeskRow": {
+    "children": ["image#homeBannerDesk"]
+  },
+  "image#homeBannerDesk": {
+    "props": {
+      "blockClass": "homeBannerDesk",
+      "src": "assets/images/Grupo 6075.png"
+    }
+  },
   "list-context.image-list#demo": {
     "children": ["slider-layout#demo-images"],
     "props": {
@@ -41,47 +56,70 @@
       "blockClass": "carousel"
     }
   },
-
-  "rich-text#shelf-title": {
-    "props": {
-      "text": "## Summer",
-      "blockClass": "shelfTitle"
-    }
-  },
   "flex-layout.row#shelf": {
     "children": ["list-context.product-list#demo1"]
   },
   "list-context.product-list#demo1": {
     "blocks": ["product-summary.shelf"],
-    "children": ["slider-layout#demo-products"],
+    "children": ["slider-layout#homeSliderDesk"],
     "props": {
       "orderBy": "OrderByTopSaleDESC"
     }
   },
-  "slider-layout#demo-products": {
+  "slider-layout#homeSliderDesk": {
     "props": {
       "itemsPerPage": {
-        "desktop": 5,
+        "desktop": 4,
         "tablet": 3,
-        "phone": 1
+        "phone": 2
       },
       "infinite": true,
       "fullWidth": false,
-      "blockClass": "shelf"
+      "blockClass": "homeSliderDesk"
     }
   },
-
-
-  "rich-text#txt-shelf":{
-    "props":{
-      "text":"Os Mais Vendidos",
-      "blockClass":"text-shelf"
-    }
-  },
-  "rich-text#txt": {
+  "rich-text#homeTxtShelf1Desk": {
     "props": {
-      "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, expedita! Neque, saepe. Doloribus quam, dolores, nemo, quae alias deserunt cumque pariatur dolore adipisci ullam repudiandae voluptatibus sed fugit sapiente architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, expedita! Neque, saepe. Doloribus quam, dolores, nemo, quae alias deserunt cumque pariatur dolore adipisci ullam repudiandae voluptatibus sed fugit sapiente architecto!",
-      "blockClass": "text"
+      "text": "PROMOÇÃO DO DIA",
+      "blockClass": "homeTxtShelf1Desk",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#homeTxtShelf2Desk": {
+    "props": {
+      "text": "OS MAIS VENDIDOS",
+      "blockClass": "homeTxtShelf2Desk",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "responsive-layout.mobile#home": {
+    "children": [
+      "flex-layout.row#homeBannerMobileRow",
+      "rich-text#homeTxtShelf1Desk",
+      "flex-layout.row#shelf",
+      "flex-layout.row#homeBanner2MobileRow",
+      "rich-text#homeTxtShelf2Desk",
+      "flex-layout.row#shelf"
+    ]
+  },
+  "flex-layout.row#homeBannerMobileRow": {
+    "children": ["image#homeBannerMobile"]
+  },
+  "image#homeBannerMobile": {
+    "props": {
+      "blockClass": "homeBannerMobile",
+      "src": "assets/images/mulher.png"
+    }
+  },
+  "flex-layout.row#homeBanner2MobileRow": {
+    "children": ["image#homeBanner2Mobile"]
+  },
+  "image#homeBanner2Mobile": {
+    "props": {
+      "blockClass": "homeBanner2Mobile",
+      "src": "assets/images/Grupo 6075.png"
     }
   }
 }
