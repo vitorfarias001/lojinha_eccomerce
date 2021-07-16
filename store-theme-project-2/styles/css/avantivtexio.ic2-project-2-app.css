@@ -211,7 +211,8 @@
 }
 
 .subtitleContent{
-  width: 150px;
+  font-weight: bold;;
+  color: #4F4F4F;
 }
 
 .buttonContainer :global(.vtex-button){
@@ -234,3 +235,70 @@
 .inputCount{
   width: 100px;
 }
+
+.valueShelf{
+  display: flex;
+  gap: 80px;
+  margin-top: 19px;
+}
+
+.Discount{
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.valueOff{
+  font-weight: bold;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.countContainer{
+  margin-top: 16px;
+}
+
+.minimumButton{
+  position: relative;
+  right: 8px;
+}
+
+.maximumButton{
+  position: relative;
+  left: 8px;
+}
+
+.renderImage{
+  width: 160px;
+}
+
+.minimumButton :global(.vtex-button__label){
+  position: relative;
+  right: 10px;
+  font-size: 40px;
+}
+
+.maximumButton :global(.vtex-button__label){
+  position: relative;
+  right: 10px;
+  font-size: 34px;
+  top: -2px;
+}
+
+.discountContent{
+  font-weight: bold;
+}
+
+.discountContainer{
+  padding: 5px 10px;
+  background: #DF2F1A;
+  width: 90px;
+  border-radius: 4px;
+  color: #fff;
+  position: relative;
+  top: 30px;
+}
+
