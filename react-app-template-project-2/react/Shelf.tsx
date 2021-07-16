@@ -70,18 +70,18 @@ const Shelf = ({discount}: ShelfProps) => {
                     <div>{item.items[0].name}</div>
                   </div>
                   <div className={`${handles.valueShelf}`}>
-                    <div className={`${handles.valueOff}`}>
-                      R$
-                      {valueOff(
-                        item.items[0].sellers[0].commertialOffer.Price * 0.9
-                      )}
-                    </div>
                     <div className={`${handles.Discount}`}>
                       R$
                       {valueOff(
                         item.items[0].sellers[0].commertialOffer.Price
                       )}
                   </div>
+                  <div className={`${handles.valueOff}`}>
+                      R$
+                      {valueOff(
+                        item.items[0].sellers[0].commertialOffer.Price * 0.9
+                      )}
+                    </div>
                   </div>
                   <div className={`${handles.countContainer}`}>
                     <div className={`${handles.minimumButton}`}>
