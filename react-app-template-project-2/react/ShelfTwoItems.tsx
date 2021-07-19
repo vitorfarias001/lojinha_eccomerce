@@ -4,7 +4,7 @@ import { useCssHandles } from 'vtex.css-handles'
 import { IShelf } from './typings/shelf'
 import { SliderLayout } from 'vtex.slider-layout'
 import { Button, Input } from 'vtex.styleguide'
-import logo from './img/Imagem.png';
+import logo from './img/Imagem.png'
 const CSS_HANDLES = [
   'shelfTwo',
   'shelfContainerTwo',
@@ -23,7 +23,7 @@ const CSS_HANDLES = [
   'valueOff',
   'Discount',
   'discountContainer',
-  'discountContent'
+  'discountContent',
 ]
 const valueOff = (value: number) => {
   return value.toLocaleString('pt-BR', {
@@ -33,15 +33,15 @@ const valueOff = (value: number) => {
   })
 }
 
-const Shelf = ({discount}: ShelfProps) => {
+const Shelf = ({ discount }: ShelfProps) => {
   const handles = useCssHandles(CSS_HANDLES)
   const [shelfWoman, setShelfWoman] = useState<IShelf[]>([])
   const [counter, setCounter] = useState(0)
-  const incremeant = () =>{
-    setCounter((c) => c +1)
+  const incremeant = () => {
+    setCounter((c) => c + 1)
   }
-  const decrement =() =>{
-    setCounter((c) => (!c ? c : c  -1 ))
+  const decrement = () => {
+    setCounter((c) => (!c ? c : c - 1))
   }
   useEffect(() => {
     axios
@@ -51,65 +51,63 @@ const Shelf = ({discount}: ShelfProps) => {
       })
   }, [])
   return (
-
     <div className={`${handles.shelfTwo}`}>
-    <div className={`${handles.shelfContainerTwo}`}>
-      <SliderLayout itemsPerPage={{ desktop: 2, phone: 2 }} >
-      <div className={`${handles.image}`}>
-       <img src={logo}/>
-     </div>
-        {shelfWoman.map((item) => {
-          return (
-            <div className={`${handles.shelfImage}`}>
-              <div className={`${handles.discountContainer}`}>
-                <div className={`${handles.discountContent}`}>
-                      {discount}% OFF
-                </div>
-              </div>
-              <div className={`${handles.renderImage}`}>
-
-                <img
-                  src={item.items[0].images[0].imageUrl}
-                  alt={item.items[0].name}
-                />
-                <div className={`${handles.subtitleShelf}`}>
-                  <div className={`${handles.subtitleContent}`}>
-                    <div>{item.items[0].name}</div>
-                  </div>
-                  <div className={`${handles.valueShelf}`}>
-                    <div className={`${handles.valueOff}`}>
-                      R$
-                      {valueOff(
-                        item.items[0].sellers[0].commertialOffer.Price * 0.9
-                      )}
-                    </div>
-                    <div className={`${handles.Discount}`}>
-                      R$
-                      {valueOff(
-                        item.items[0].sellers[0].commertialOffer.Price
-                      )}
-                  </div>
-                  </div>
-                  <div className={`${handles.countContainer}`}>
-                    <div className={`${handles.minimumButton}`}>
-                      <Button  onClick={decrement}> - </Button>
-                    </div>
-                    <div className={`${handles.inputCount}`}>
-                      <Input type="text" readOnly value={counter}/>
-                    </div>
-                    <div className={`${handles.maximumButton}`}>
-                      <Button onClick={incremeant} > + </Button>
-                    </div>
-                  </div>
-                  <div className={`${handles.buttonContainer}`}>
-                    <Button>Adicionar</Button>
+      <div className={`${handles.shelfContainerTwo}`}>
+        <SliderLayout itemsPerPage={{ desktop: 2, phone: 2 }}>
+          <div className={`${handles.image}`}>
+            <img src={logo} />
+          </div>
+          {shelfWoman.map((item) => {
+            return (
+              <div className={`${handles.shelfImage}`}>
+                <div className={`${handles.discountContainer}`}>
+                  <div className={`${handles.discountContent}`}>
+                    {discount}% OFF
                   </div>
                 </div>
+                <div className={`${handles.renderImage}`}>
+                  <img
+                    src={item.items[0].images[0].imageUrl}
+                    alt={item.items[0].name}
+                  />
+                  <div className={`${handles.subtitleShelf}`}>
+                    <div className={`${handles.subtitleContent}`}>
+                      <div>{item.items[0].name}</div>
+                    </div>
+                    <div className={`${handles.valueShelf}`}>
+                      <div className={`${handles.valueOff}`}>
+                        R$
+                        {valueOff(
+                          item.items[0].sellers[0].commertialOffer.Price * 0.9
+                        )}
+                      </div>
+                      <div className={`${handles.Discount}`}>
+                        R$
+                        {valueOff(
+                          item.items[0].sellers[0].commertialOffer.Price
+                        )}
+                      </div>
+                    </div>
+                    <div className={`${handles.countContainer}`}>
+                      <div className={`${handles.minimumButton}`}>
+                        <Button onClick={decrement}> - </Button>
+                      </div>
+                      <div className={`${handles.inputCount}`}>
+                        <Input type="text" readOnly value={counter} />
+                      </div>
+                      <div className={`${handles.maximumButton}`}>
+                        <Button onClick={incremeant}> + </Button>
+                      </div>
+                    </div>
+                    <div className={`${handles.buttonContainer}`}>
+                      <Button>Adicionar</Button>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          )
-        })}
-      </SliderLayout>
+            )
+          })}
+        </SliderLayout>
       </div>
     </div>
   )

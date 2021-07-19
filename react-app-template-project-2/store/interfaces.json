@@ -11,7 +11,7 @@
   "newsletter-project-2": {
     "component": "Newsletter"
   },
-  "shelftwoitems":{
-    "component":"ShelfTwoItems"
+  "shelftwoitems": {
+    "component": "ShelfTwoItems"
   }
 }

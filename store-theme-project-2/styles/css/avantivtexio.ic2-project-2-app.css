@@ -20,6 +20,19 @@
   cursor: pointer;
 }
 
+.footerCategoryName {
+  text-decoration: none;
+
+  display: block;
+
+  color: #202020;
+  font-size: 14px;
+  line-height: 21px;
+
+  padding: 5px;
+  cursor: pointer;
+}
+
 .subMenuContainer {
   position: absolute;
   top: 100%;
@@ -90,7 +103,7 @@
 }
 
 .menuFooterContainer {
-  height: 160px;
+  height: 155px;
 
   display: flex;
   flex-direction: column;
@@ -129,6 +142,9 @@
   }
   .subMenuImage {
     display: none;
+  }
+  .menuFooterContainer {
+    height: auto;
   }
 }
 
@@ -192,110 +208,110 @@
 
 /*SHELF (4)*/
 
-.sliderLayoutContainer{
+.sliderLayoutContainer {
   width: 1070px;
   display: flex;
 }
-.paginationDotsContainer{
+.paginationDotsContainer {
   display: none;
 }
 
-.sliderLeftArrow{
+.sliderLeftArrow {
   display: none;
 }
-.sliderRightArrow{
+.sliderRightArrow {
   display: none;
 }
-.shelfContainer{
+.shelfContainer {
   display: flex;
   justify-content: center;
 }
 
-.subtitleContent{
-  font-weight: bold;;
-  color: #4F4F4F;
+.subtitleContent {
+  font-weight: bold;
+  color: #4f4f4f;
 }
 
-.buttonContainer :global(.vtex-button){
+.buttonContainer :global(.vtex-button) {
   width: 200px;
   height: 38px;
   background: #008939;
   border-color: #008939;
   font-weight: bold;
 }
-.countContainer{
+.countContainer {
   display: flex;
   justify-content: center;
 }
-.countContainer :global(.vtex-button){
+.countContainer :global(.vtex-button) {
   border-radius: 50%;
   width: 32px;
   height: 32px;
 }
 
-.inputCount{
+.inputCount {
   width: 100px;
 }
 
-.valueShelf{
+.valueShelf {
   display: flex;
   gap: 80px;
   margin-top: 19px;
 }
 
-.Discount{
-  color: #FF0000;
+.Discount {
+  color: #ff0000;
   font-weight: bold;
 }
 
-.valueOff{
+.valueOff {
   font-weight: bold;
 }
 
-.buttonContainer{
+.buttonContainer {
   display: flex;
   justify-content: center;
   margin-top: 16px;
 }
 
-.countContainer{
+.countContainer {
   margin-top: 16px;
 }
 
-.minimumButton{
+.minimumButton {
   position: relative;
   right: 8px;
 }
 
-.maximumButton{
+.maximumButton {
   position: relative;
   left: 8px;
 }
 
-.renderImage{
+.renderImage {
   width: 160px;
 }
 
-.minimumButton :global(.vtex-button__label){
+.minimumButton :global(.vtex-button__label) {
   position: relative;
   right: 10px;
   font-size: 40px;
 }
 
-.maximumButton :global(.vtex-button__label){
+.maximumButton :global(.vtex-button__label) {
   position: relative;
   right: 10px;
   font-size: 34px;
   top: -2px;
 }
 
-.discountContent{
+.discountContent {
   font-weight: bold;
 }
 
-.discountContainer{
+.discountContainer {
   padding: 5px 10px;
-  background: #DF2F1A;
+  background: #df2f1a;
   width: 90px;
   border-radius: 4px;
   color: #fff;
@@ -303,10 +319,9 @@
   top: 30px;
 }
 
-
 /*SHELF 2 ITEMS*/
 
-.shelfTwo{
+.shelfTwo {
   display: flex;
   justify-content: flex-end;
   width: 908px;

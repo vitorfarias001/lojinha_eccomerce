@@ -38,6 +38,44 @@
   gap: 11px;
 }
 
+/* Footer */
+.flexRow--footer1Row {
+  width: 908px;
+  margin: 0 auto;
+}
+
+.flexRowContent--footer1Row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexRow--footer2RowDesk {
+  margin-top: 79px;
+
+  height: 61px;
+
+  display: flex;
+  align-items: center;
+
+  background: #f8f8f8;
+}
+
+.flexRow--footer2RowMobile {
+  margin-top: 40px;
+
+  height: 95px;
+
+  display: flex;
+  align-items: center;
+
+  background: #f8f8f8;
+}
+
+.flexCol--footer1ColMobile {
+  gap: 40px;
+  padding-left: 20px;
+}
+
 /* Store theme default*/
 .flexRowContent--menu-link,
 .flexRowContent--main-header {

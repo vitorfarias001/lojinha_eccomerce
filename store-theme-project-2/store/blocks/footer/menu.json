@@ -1,13 +1,15 @@
 {
   "vtex.menu@2.x:menu#categorias": {
     "props": {
-      "orientation": "vertical"
+      "orientation": "vertical",
+      "blockClass": "categorias"
     },
-    "children": ["menu-item#categoriasTitle", "menu-footer-project-2"]
+    "children": ["menu-item#footerCategoriasTitle", "menu-footer-project-2"]
   },
-  "menu-item#categoriasTitle": {
+  "menu-item#footerCategoriasTitle": {
     "props": {
-      "id": "foote-item-title",
+      "id": "footer-item-title",
+      "blockClass": ["footerCategoriasTitle", "footerTitle"],
       "type": "custom",
       "iconId": null,
       "highlight": false,
@@ -19,369 +21,216 @@
       }
     }
   },
-  "menu-item#blackfriday": {
+  "vtex.menu@2.x:menu#footerInstitucional": {
     "props": {
-      "id": "menu-item-black-friday",
+      "orientation": "vertical",
+      "blockClass": "footerInstitucional"
+    },
+    "children": [
+      "menu-item#institucionalTitle",
+      "menu-item#termosDeUso",
+      "menu-item#trabalheConosco",
+      "menu-item#trocaEDevolucao",
+      "menu-item#frete",
+      "menu-item#faleConosco"
+    ]
+  },
+  "menu-item#institucionalTitle": {
+    "props": {
+      "id": "institucionalTitle",
+      "blockClass": ["institucionalTitle", "footerTitle"],
       "type": "custom",
       "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
         "href": "#",
-        "noFollow": false,
-        "tagTitle": "BlackFriday",
-        "text": "Black Friday"
+        "noFollow": true,
+        "tagTitle": "Institucional",
+        "text": "Institucional"
       }
     }
   },
-  "menu-item#sale": {
+  "menu-item#termosDeUso": {
     "props": {
-      "id": "menu-item-sale",
+      "id": "termosDeUso",
+      "blockClass": ["termosDeUso", "footerItem"],
       "type": "custom",
       "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
         "href": "#",
-        "noFollow": false,
-        "tagTitle": "Sale",
-        "text": "Sale"
+        "noFollow": true,
+        "tagTitle": "Privacidade e Termos de Uso",
+        "text": "Privacidade e Termos de Uso"
       }
     }
   },
-  "menu-item#personalization": {
+  "menu-item#trabalheConosco": {
     "props": {
-      "id": "menu-item-personalization",
+      "id": "trabalheConosco",
+      "blockClass": ["trabalheConosco", "footerItem"],
       "type": "custom",
       "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
         "href": "#",
-        "noFollow": false,
-        "tagTitle": "Personalization",
-        "text": "Personalization"
+        "noFollow": true,
+        "tagTitle": "Trabalhe Conosco",
+        "text": "Trabalhe Conosco"
       }
     }
   },
-
-  "vtex.menu@2.x:menu#footer-decoration": {
+  "menu-item#trocaEDevolucao": {
+    "props": {
+      "id": "trocaEDevolucao",
+      "blockClass": ["trocaEDevolucao", "footerItem"],
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": true,
+        "tagTitle": "Política de Troca e Devolução",
+        "text": "Política de Troca e Devolução"
+      }
+    }
+  },
+  "menu-item#frete": {
+    "props": {
+      "id": "frete",
+      "blockClass": ["frete", "footerItem"],
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": true,
+        "tagTitle": "Política de Frete",
+        "text": "Política de Frete"
+      }
+    }
+  },
+  "menu-item#faleConosco": {
+    "props": {
+      "id": "faleConosco",
+      "blockClass": ["faleConosco", "footerItem"],
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": true,
+        "tagTitle": "Fale Conosco",
+        "text": "Fale Conosco"
+      }
+    }
+  },
+  "vtex.menu@2.x:menu#faleConosco": {
     "props": {
       "orientation": "vertical"
     },
     "children": [
-      "menu-item#smartphones",
-      "menu-item#videogames",
-      "menu-item#tvs"
+      "menu-item#faleConoscoTitle",
+      "menu-item#email",
+      "menu-item#telefone",
+      "social-networks#footer"
     ]
   },
-
-  "menu-item#smartphones": {
+  "menu-item#faleConoscoTitle": {
     "props": {
-      "id": "menu-item-smartphones",
+      "id": "faleConoscoTitle",
+      "blockClass": ["faleConoscoTitle", "footerTitle"],
       "type": "custom",
       "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/decoration/smartphones",
+        "href": "#",
         "noFollow": true,
-        "tagTitle": "Smartphones",
-        "text": "Smartphones"
+        "tagTitle": "Fale conosco",
+        "text": "Fale conosco"
       }
     }
   },
-
-  "menu-item#videogames": {
-    "props": {
-      "id": "menu-item-videogames",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/decoration/videogames",
-        "noFollow": true,
-        "tagTitle": "Videogames",
-        "text": "Videogames"
-      }
-    }
-  },
-
-  "menu-item#tvs": {
-    "props": {
-      "id": "menu-item-tvs",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/decoration/tvs",
-        "noFollow": true,
-        "tagTitle": "TVs",
-        "text": "TVs"
-      }
-    }
-  },
-
-  "vtex.menu@2.x:menu#footer-bags": {
-    "props": {
-      "orientation": "vertical"
-    },
-    "children": [
-      "menu-item#bags",
-      "menu-item#backpacks",
-      "menu-item#necessaire"
-    ]
-  },
-
-  "menu-item#bags": {
-    "props": {
-      "id": "menu-item-bags",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/bags/d",
-        "noFollow": true,
-        "tagTitle": "Bags",
-        "text": "Bags"
-      }
-    }
-  },
-
-  "menu-item#backpacks": {
+  "menu-item#email": {
     "props": {
       "id": "menu-item-backpacks",
+      "blockClass": ["email", "footerItem"],
       "type": "custom",
       "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/bags/backpacks",
+        "href": "#",
         "noFollow": true,
-        "tagTitle": "Backpacks",
-        "text": "Backpacks"
+        "tagTitle": "atendimento@avanti.com.br",
+        "text": "atendimento@avanti.com.br"
       }
     }
   },
-
-  "menu-item#necessaire": {
+  "menu-item#telefone": {
     "props": {
-      "id": "menu-item-necessaire",
+      "id": "telefone",
+      "blockClass": ["telefone", "footerItem"],
       "type": "custom",
       "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/bags/necessaire",
+        "href": "#",
         "noFollow": true,
-        "tagTitle": "Necessaire",
-        "text": "Necessaire"
+        "tagTitle": "(14)00000-0000",
+        "text": "(14)00000-0000"
       }
     }
   },
-
-  "vtex.menu@2.x:menu#footer-clothing": {
+  "social-networks#footer": {
     "props": {
-      "orientation": "vertical"
-    },
-    "children": [
-      "menu-item#clothing",
-      "menu-item#shorts",
-      "menu-item#tank-tops",
-      "menu-item#shirts",
-      "menu-item#sweatshirt",
-      "menu-item#cropped"
-    ]
-  },
-
-  "vtex.menu@2.x:menu#footer-mobile": {
-    "props": {
-      "orientation": "vertical"
-    },
-    "children": [
-      "menu-item#clothing-mobile",
-      "menu-item#decoration-mobile",
-      "menu-item#sale-mobile"
-    ]
-  },
-
-  "menu-item#clothing-mobile": {
-    "props": {
-      "id": "menu-item-category-clothing",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/clothing/d",
-        "noFollow": true,
-        "tagTitle": "Clothing",
-        "text": "Clothing"
-      }
-    },
-    "blocks": ["vtex.menu@2.x:submenu.accordion#clothing"]
-  },
-  "vtex.menu@2.x:submenu.accordion#clothing": {
-    "children": ["vtex.menu@2.x:menu#clothing-accordion"]
-  },
-
-  "vtex.menu@2.x:menu#clothing-accordion": {
-    "props": {
-      "orientation": "vertical"
-    },
-    "children": [
-      "menu-item#shorts",
-      "menu-item#tank-tops",
-      "menu-item#shirts",
-      "menu-item#sweatshirt",
-      "menu-item#cropped"
-    ]
-  },
-
-  "menu-item#decoration-mobile": {
-    "props": {
-      "itemProps": {
-        "tagTitle": "Decoration",
-        "text": "Decoration"
-      }
-    },
-    "blocks": ["vtex.menu@2.x:submenu.accordion#decoration"]
-  },
-  "vtex.menu@2.x:submenu.accordion#decoration": {
-    "children": ["vtex.menu@2.x:menu#footer-decoration-mobile"]
-  },
-
-  "vtex.menu@2.x:menu#footer-decoration-mobile": {
-    "props": {
-      "orientation": "vertical"
-    },
-    "children": [
-      "menu-item#smartphones",
-      "menu-item#videogames",
-      "menu-item#tvs"
-    ]
-  },
-
-  "menu-item#sale-mobile": {
-    "props": {
-      "itemProps": {
-        "tagTitle": "Sale",
-        "text": "Sale"
-      }
-    },
-    "blocks": ["vtex.menu@2.x:submenu.accordion#sale"]
-  },
-  "vtex.menu@2.x:submenu.accordion#sale": {
-    "children": ["vtex.menu@2.x:menu#footer-sale-mobile"]
-  },
-
-  "vtex.menu@2.x:menu#footer-sale-mobile": {
-    "props": {
-      "orientation": "vertical"
-    },
-    "children": [
-      "menu-item#smartphones",
-      "menu-item#videogames",
-      "menu-item#tvs"
-    ]
-  },
-
-  "menu-item#clothing": {
-    "props": {
-      "id": "menu-item-category-clothing",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/clothing/d",
-        "noFollow": true,
-        "tagTitle": "Clothing",
-        "text": "Clothing"
-      }
+      "blockClass": "footer",
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/vtexonline/"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/vtextruecloud/"
+        },
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin.com/company/vtexonline"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/user/VTEXTV"
+        }
+      ]
     }
   },
-
-  "menu-item#shorts": {
+  "vtex.menu@2.x:menu#pagamento": {
     "props": {
-      "id": "menu-item-shorts",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/clothing/shorts",
-        "noFollow": false,
-        "tagTitle": "Shorts",
-        "text": "Shorts"
-      }
-    }
+      "orientation": "vertical",
+      "blockClass": "pagamento"
+    },
+    "children": ["flex-layout.row#footerMenuPagamentoRowMobile"]
   },
-
-  "menu-item#tank-tops": {
+  "flex-layout.row#footerMenuPagamentoRowMobile": {
     "props": {
-      "id": "menu-item-tank-tops",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/clothing/tank-tops",
-        "noFollow": false,
-        "tagTitle": "Tank tops",
-        "text": "Tank tops"
-      }
-    }
+      "blockClass": "footerMenuPagamentoRowMobile"
+    },
+    "children": []
   },
-
-  "menu-item#shirts": {
+  "vtex.menu@2.x:menu#selos": {
     "props": {
-      "id": "menu-item-shirts",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/clothing/shirts",
-        "noFollow": false,
-        "tagTitle": "Shirts",
-        "text": "Shirts"
-      }
-    }
-  },
-
-  "menu-item#sweatshirt": {
-    "props": {
-      "id": "menu-item-sweat-shirts",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/clothing/sweatshirt",
-        "noFollow": false,
-        "tagTitle": "Sweatshirt",
-        "text": "Sweatshirt"
-      }
-    }
-  },
-
-  "menu-item#cropped": {
-    "props": {
-      "id": "menu-item-cropped",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/clothing/cropped",
-        "noFollow": false,
-        "tagTitle": "Cropped",
-        "text": "Cropped"
-      }
-    }
+      "orientation": "vertical",
+      "blockClass": "selos"
+    },
+    "children": []
   }
 }

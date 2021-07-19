@@ -18,8 +18,8 @@
     ]
   },
   "flex-layout.row#homeBannerDeskRow": {
-    "props":{
-      "blockClass":"homeBannerDesk"
+    "props": {
+      "blockClass": "homeBannerDesk"
     },
     "children": ["image#homeBannerDesk"]
   },

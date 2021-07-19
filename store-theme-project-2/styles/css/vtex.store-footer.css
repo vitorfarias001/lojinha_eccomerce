@@ -1,11 +1,53 @@
-.row--menu-row {
-  padding-right: 24px;
+.styledLinkContent--footerItem {
+  text-decoration: none;
+
+  display: block;
+
+  color: #202020;
+  font-size: 14px;
+  line-height: 21px;
+
+  padding: 5px;
+  cursor: pointer;
 }
 
-.row--menu-row .rowContainer {
-  align-items: flex-start;
+.socialNetworksContainer--footer {
+  margin: 0;
+  gap: 35px;
 }
 
-.row--payment-methods {
-  padding-top: 16px;
+.socialNetworkWrapper--footer {
+  margin-top: 35px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .socialNetworkWrapper--footer {
+    padding-left: 5px;
+  }
+}
+
+.socialNetworkLink--footer {
+  width: 21px;
+  height: 21px;
+  margin: 0;
+}
+
+.socialNetworkImage--footer {
+  display: none;
+}
+
+.socialNetworkLink--footer--facebook {
+  background: url("assets/images/fa-facebook-official.png");
+}
+
+.socialNetworkLink--footer--instagram {
+  background: url("assets/images/fa-brand-instagram.png");
+}
+
+.socialNetworkLink--footer--linkedin {
+  background: url("assets/images/fa-brand-linkedin.png");
+}
+
+.socialNetworkLink--footer--youtube {
+  background: url("assets/images/fa-brand-whatsapp.png");
 }
