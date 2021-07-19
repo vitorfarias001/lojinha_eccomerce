@@ -6,7 +6,7 @@ import { SliderLayout } from 'vtex.slider-layout'
 import { Button, Input } from 'vtex.styleguide'
 
 const CSS_HANDLES = [
-  'shelf',
+  'shelfTwo',
   'shelfContainer',
   'titleShelf',
   'shelfImage',
@@ -22,7 +22,7 @@ const CSS_HANDLES = [
   'valueOff',
   'Discount',
   'discountContainer',
-  'discountContent'
+  'discountContent',
 ]
 const valueOff = (value: number) => {
   return value.toLocaleString('pt-BR', {
@@ -32,15 +32,15 @@ const valueOff = (value: number) => {
   })
 }
 
-const Shelf = ({discount}: ShelfProps) => {
+const Shelf = ({ discount }: ShelfProps) => {
   const handles = useCssHandles(CSS_HANDLES)
   const [shelfWoman, setShelfWoman] = useState<IShelf[]>([])
   const [counter, setCounter] = useState(0)
-  const incremeant = () =>{
-    setCounter((c) => c +1)
+  const incremeant = () => {
+    setCounter((c) => c + 1)
   }
-  const decrement =() =>{
-    setCounter((c) => (!c ? c : c  -1 ))
+  const decrement = () => {
+    setCounter((c) => (!c ? c : c - 1))
   }
   useEffect(() => {
     axios
@@ -51,13 +51,13 @@ const Shelf = ({discount}: ShelfProps) => {
   }, [])
   return (
     <div className={`${handles.shelfContainer}`}>
-      <SliderLayout itemsPerPage={{ desktop: 4, phone: 2 }} >
+      <SliderLayout itemsPerPage={{ desktop: 4, phone: 2 }}>
         {shelfWoman.map((item) => {
           return (
             <div className={`${handles.shelfImage}`}>
               <div className={`${handles.discountContainer}`}>
                 <div className={`${handles.discountContent}`}>
-                      {discount}% OFF
+                  {discount}% OFF
                 </div>
               </div>
               <div className={`${handles.renderImage}`}>
@@ -72,11 +72,9 @@ const Shelf = ({discount}: ShelfProps) => {
                   <div className={`${handles.valueShelf}`}>
                     <div className={`${handles.Discount}`}>
                       R$
-                      {valueOff(
-                        item.items[0].sellers[0].commertialOffer.Price
-                      )}
-                  </div>
-                  <div className={`${handles.valueOff}`}>
+                      {valueOff(item.items[0].sellers[0].commertialOffer.Price)}
+                    </div>
+                    <div className={`${handles.valueOff}`}>
                       R$
                       {valueOff(
                         item.items[0].sellers[0].commertialOffer.Price * 0.9
@@ -85,13 +83,13 @@ const Shelf = ({discount}: ShelfProps) => {
                   </div>
                   <div className={`${handles.countContainer}`}>
                     <div className={`${handles.minimumButton}`}>
-                      <Button  onClick={decrement}> - </Button>
+                      <Button onClick={decrement}> - </Button>
                     </div>
                     <div className={`${handles.inputCount}`}>
-                      <Input type="text" readOnly value={counter}/>
+                      <Input type="text" readOnly value={counter} />
                     </div>
                     <div className={`${handles.maximumButton}`}>
-                      <Button onClick={incremeant} > + </Button>
+                      <Button onClick={incremeant}> + </Button>
                     </div>
                   </div>
                   <div className={`${handles.buttonContainer}`}>

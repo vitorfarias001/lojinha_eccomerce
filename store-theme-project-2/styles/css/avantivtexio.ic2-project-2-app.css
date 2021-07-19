@@ -153,6 +153,7 @@
   display: flex;
   justify-content: center;
   text-align: left;
+  margin-top: 73px;
 }
 .newsletter {
   height: 100px;
@@ -316,4 +317,13 @@
   color: #fff;
   position: relative;
   top: 30px;
+}
+
+/*SHELF 2 ITEMS*/
+
+.shelfTwo {
+  display: flex;
+  justify-content: flex-end;
+  width: 908px;
+  margin: 0 auto;
 }
