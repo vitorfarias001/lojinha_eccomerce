@@ -38,24 +38,14 @@
   "footer-layout.mobile": {
     "children": [
       "flex-layout.row#footer1RowMobile",
-      "flex-layout.row#2-footer-mobile"
+      "flex-layout.row#footer2RowMobile"
     ]
   },
-  "flex-layout.row#2-footer-mobile": {
-    "children": ["flex-layout.col#footer-1-mobile"],
+  "flex-layout.row#footer2RowMobile": {
     "props": {
-      "blockClass": "payment-methods"
-    }
-  },
-  "flex-layout.col#footer-1-mobile": {
-    "children": [
-      "accepted-payment-methods",
-      "social-networks",
-      "rich-text#footer-mobile"
-    ],
-    "props": {
-      "blockClass": "payment-methods"
-    }
+      "blockClass": "footer2RowMobile"
+    },
+    "children": ["rich-text#footer-mobile"]
   },
   "flex-layout.row#footer1RowMobile": {
     "props": {

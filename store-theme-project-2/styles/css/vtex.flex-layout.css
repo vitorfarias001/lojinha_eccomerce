@@ -60,6 +60,17 @@
   background: #f8f8f8;
 }
 
+.flexRow--footer2RowMobile {
+  margin-top: 40px;
+
+  height: 95px;
+
+  display: flex;
+  align-items: center;
+
+  background: #f8f8f8;
+}
+
 .flexCol--footer1ColMobile {
   gap: 40px;
   padding-left: 20px;
