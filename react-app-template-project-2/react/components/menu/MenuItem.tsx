@@ -15,6 +15,7 @@ interface MenuItemProps {
 
 const CSS_HANDLES = [
   'categoryContainer',
+  'footerCategoryContainer',
   'categoryLink',
   'categoryName',
   'footerCategoryName',
@@ -38,8 +39,12 @@ const MenuItem = ({ category, footer }: MenuItemProps) => {
   }
 
   return (
-    <div className={handles.categoryContainer}>
-      {category.hasChildren || footer ? (
+    <div
+      className={
+        footer ? handles.footerCategoryContainer : handles.categoryContainer
+      }
+    >
+      {category.hasChildren && !footer ? (
         <div
           role="Link"
           className={footer ? handles.footerCategoryName : handles.categoryName}
@@ -56,7 +61,7 @@ const MenuItem = ({ category, footer }: MenuItemProps) => {
         <a
           className={footer ? handles.footerCategoryName : handles.categoryName}
           href={category.url}
-          onClick={showSub}
+          onClick={footer ? undefined : showSub}
         >
           {category.name}
         </a>
