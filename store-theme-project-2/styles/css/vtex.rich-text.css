@@ -96,6 +96,12 @@
   margin-bottom: 57px;
   margin-top: 57px;
 }
+.wrapper--homeTxtShelf2Desk{
+  font-weight: bold;
+  font-size: 35px;
+  font-family: 'Raleway', sans-serif;
+
+}
 @media only screen and (min-width: 640px) {
   .container--question .strong {
     font-size: 40px;

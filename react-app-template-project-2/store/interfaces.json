@@ -1,5 +1,5 @@
 {
-  "Shelf": {
+  "shelf": {
     "component": "Shelf"
   },
   "menu-project-2": {
@@ -10,5 +10,8 @@
   },
   "newsletter-project-2": {
     "component": "Newsletter"
+  },
+  "shelftwoitems":{
+    "component":"ShelfTwoItems"
   }
 }
