@@ -60,6 +60,11 @@
   background: #f8f8f8;
 }
 
+.flexCol--footer1ColMobile {
+  gap: 40px;
+  padding-left: 20px;
+}
+
 /* Store theme default*/
 .flexRowContent--menu-link,
 .flexRowContent--main-header {

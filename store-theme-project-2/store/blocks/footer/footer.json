@@ -37,16 +37,14 @@
   },
   "footer-layout.mobile": {
     "children": [
-      "flex-layout.row#1-footer-mobile",
+      "flex-layout.row#footer1RowMobile",
       "flex-layout.row#2-footer-mobile"
     ]
   },
   "flex-layout.row#2-footer-mobile": {
     "children": ["flex-layout.col#footer-1-mobile"],
     "props": {
-      "blockClass": "payment-methods",
-      "paddingTop": 4,
-      "paddingBottom": 4
+      "blockClass": "payment-methods"
     }
   },
   "flex-layout.col#footer-1-mobile": {
@@ -56,23 +54,31 @@
       "rich-text#footer-mobile"
     ],
     "props": {
-      "blockClass": "payment-methods",
-      "paddingTop": 4,
-      "paddingBottom": 4,
-      "rowGap": 4
+      "blockClass": "payment-methods"
     }
   },
-  "flex-layout.row#1-footer-mobile": {
+  "flex-layout.row#footer1RowMobile": {
     "props": {
-      "paddingTop": 4,
-      "paddingBottom": 4
+      "blockClass": "footer1RowMobile"
     },
-    "children": ["vtex.menu@2.x:menu#footer-mobile"]
+    "children": ["flex-layout.col#footer1ColMobile"]
+  },
+  "flex-layout.col#footer1ColMobile": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "blockClass": "footer1ColMobile"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#categorias",
+      "vtex.menu@2.x:menu#footerInstitucional",
+      "vtex.menu@2.x:menu#faleConosco"
+    ]
   },
   "rich-text#footer-mobile": {
     "props": {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus proin neque montes, eget. Porta et diam nunc in massa turpis ultricies. Nibh ullamcorper id tellus volutpat elementum morbi egestas nulla id. In in in leo sed mattis.",
-      "blockClass": "footer"
+      "blockClass": ["footer", "footerMobile"]
     }
   }
 }

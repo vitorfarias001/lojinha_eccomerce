@@ -143,6 +143,9 @@
   .subMenuImage {
     display: none;
   }
+  .menuFooterContainer {
+    height: auto;
+  }
 }
 
 /*NEWSLETTER*/
