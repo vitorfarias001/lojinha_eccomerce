@@ -152,7 +152,6 @@
 }
 
 .infoCardContainer--info-card-home {
-  max-width: 1520px;
   margin: 0 auto;
   background-color: #e6f1e6;
   padding: 0px;
@@ -160,7 +159,6 @@
 
 .newsletter {
   background-color: #03054e;
-  max-width: 1528px;
   margin: 0 auto;
 }
 
