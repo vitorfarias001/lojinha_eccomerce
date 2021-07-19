@@ -1,0 +1,34 @@
+.menuItem--footerTitle {
+  margin-bottom: 15px;
+}
+
+.styledLinkContainer--footerTitle {
+  margin: 0;
+  padding: 0 0 0 5px;
+}
+
+.styledLinkContainer--footerItem {
+  margin: 0;
+  padding: 0;
+}
+
+.styledLink--footerTitle,
+.styledLink--footerItem {
+  display: block;
+}
+
+.styledLinkContent--footerTitle {
+  color: #1b4d9b;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.styledLinkContent--footerItem {
+  color: #202020;
+  font-size: 14px;
+  line-height: 21px;
+
+  padding: 5px;
+  cursor: pointer;
+}
