@@ -10,18 +10,20 @@
       /* "list-context.image-list#demo", */
       "flex-layout.row#homeBannerDeskRow",
       "rich-text#homeTxtShelf1Desk",
-      "flex-layout.row#shelf",
-      "avantivtexio.ic2-project-2-app:shelf",
+      "avantivtexio.ic2-project-2-app:shelftwoitems",
       "flex-layout.row#homeBannerDeskRow",
       "rich-text#homeTxtShelf2Desk",
-      "flex-layout.row#shelf",
       "avantivtexio.ic2-project-2-app:shelf",
       "newsletter-project-2"
     ]
   },
   "flex-layout.row#homeBannerDeskRow": {
+    "props":{
+      "blockClass":"homeBannerDesk"
+    },
     "children": ["image#homeBannerDesk"]
   },
+
   "image#homeBannerDesk": {
     "props": {
       "blockClass": "homeBannerDesk",

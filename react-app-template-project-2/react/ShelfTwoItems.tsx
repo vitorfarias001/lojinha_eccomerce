@@ -4,10 +4,11 @@ import { useCssHandles } from 'vtex.css-handles'
 import { IShelf } from './typings/shelf'
 import { SliderLayout } from 'vtex.slider-layout'
 import { Button, Input } from 'vtex.styleguide'
-
+import logo from './img/Imagem.png';
 const CSS_HANDLES = [
   'shelfTwo',
-  'shelfContainer',
+  'shelfContainerTwo',
+  'image',
   'titleShelf',
   'shelfImage',
   'renderImage',
@@ -50,8 +51,13 @@ const Shelf = ({discount}: ShelfProps) => {
       })
   }, [])
   return (
-    <div className={`${handles.shelfContainer}`}>
-      <SliderLayout itemsPerPage={{ desktop: 4, phone: 2 }}>
+
+    <div className={`${handles.shelfTwo}`}>
+    <div className={`${handles.shelfContainerTwo}`}>
+      <SliderLayout itemsPerPage={{ desktop: 2, phone: 2 }} >
+      <div className={`${handles.image}`}>
+       <img src={logo}/>
+     </div>
         {shelfWoman.map((item) => {
           return (
             <div className={`${handles.shelfImage}`}>
@@ -61,6 +67,7 @@ const Shelf = ({discount}: ShelfProps) => {
                 </div>
               </div>
               <div className={`${handles.renderImage}`}>
+
                 <img
                   src={item.items[0].images[0].imageUrl}
                   alt={item.items[0].name}
@@ -70,18 +77,18 @@ const Shelf = ({discount}: ShelfProps) => {
                     <div>{item.items[0].name}</div>
                   </div>
                   <div className={`${handles.valueShelf}`}>
+                    <div className={`${handles.valueOff}`}>
+                      R$
+                      {valueOff(
+                        item.items[0].sellers[0].commertialOffer.Price * 0.9
+                      )}
+                    </div>
                     <div className={`${handles.Discount}`}>
                       R$
                       {valueOff(
                         item.items[0].sellers[0].commertialOffer.Price
                       )}
                   </div>
-                  <div className={`${handles.valueOff}`}>
-                      R$
-                      {valueOff(
-                        item.items[0].sellers[0].commertialOffer.Price * 0.9
-                      )}
-                    </div>
                   </div>
                   <div className={`${handles.countContainer}`}>
                     <div className={`${handles.minimumButton}`}>
@@ -96,16 +103,15 @@ const Shelf = ({discount}: ShelfProps) => {
                   </div>
                   <div className={`${handles.buttonContainer}`}>
                     <Button>Adicionar</Button>
-                    </div>
                   </div>
                 </div>
               </div>
+            </div>
           )
         })}
       </SliderLayout>
-
+      </div>
     </div>
-
   )
 }
 
