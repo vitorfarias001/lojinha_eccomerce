@@ -8,10 +8,6 @@
   width: 512px;
 }
 
-.searchBarInnerContainer--headerMobile {
-  width: 374px;
-}
-
 .searchBarInnerContainer--headerDesk
   .autoCompleteOuterContainer--headerDesk
   :global(.vtex-input-prefix__group) {
@@ -45,10 +41,6 @@
   position: relative;
 }
 
-.searchBarInnerContainer--headerMobile :global(.vtex-input__suffix) {
-  min-width: 47px;
-}
-
 .autoCompleteOuterContainer--headerDesk
   :global(.vtex-input__suffix)
   :global(.vtex__icon-search) {
@@ -65,13 +57,6 @@
   fill: transparent;
 }
 
-.autoCompleteOuterContainer--headerMobile
-  :global(.vtex-input__suffix)
-  :global(.vtex__icon-search) {
-  color: white;
-  fill: white;
-}
-
 .autoCompleteOuterContainer--headerDesk
   :global(.vtex-input__suffix)
   :nth-child(odd) {
@@ -86,15 +71,6 @@
   border-width: 0;
 }
 
-.autoCompleteOuterContainer--headerMobile
-  :global(.vtex-input__suffix)
-  :nth-child(odd) {
-  height: 16px;
-  width: 16px;
-  left: calc(50% - 8px);
-  top: calc(50% - 8px);
-}
-
 .autoCompleteOuterContainer--headerDesk
   :global(.vtex-input__suffix)
   :global(.vtex__icon-clear) {
@@ -103,13 +79,6 @@
   left: -30%;
   height: 16px;
   width: 16px;
-}
-
-.autoCompleteOuterContainer--headerMobile
-  :global(.vtex-input__suffix)
-  :global(.vtex__icon-clear) {
-  position: absolute;
-  left: -55%;
 }
 
 .autoCompleteOuterContainer--headerDesk
@@ -122,14 +91,47 @@
   left: 43px;
 }
 
-.autoCompleteOuterContainer--headerMobile
-  :global(.vtex-input__suffix)
-  :nth-child(even)::after {
-  content: "";
-}
-
 .logoLink--logoDesktop {
   height: 44px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .searchBarInnerContainer--headerMobile {
+    width: 374px;
+  }
+
+  .searchBarInnerContainer--headerMobile :global(.vtex-input__suffix) {
+    min-width: 47px;
+  }
+
+  .autoCompleteOuterContainer--headerMobile
+    :global(.vtex-input__suffix)
+    :global(.vtex__icon-search) {
+    color: white;
+    fill: white;
+  }
+
+  .autoCompleteOuterContainer--headerMobile
+    :global(.vtex-input__suffix)
+    :nth-child(odd) {
+    height: 16px;
+    width: 16px;
+    left: calc(50% - 8px);
+    top: calc(50% - 8px);
+  }
+
+  .autoCompleteOuterContainer--headerMobile
+    :global(.vtex-input__suffix)
+    :global(.vtex__icon-clear) {
+    position: absolute;
+    left: -55%;
+  }
+
+  .autoCompleteOuterContainer--headerMobile
+    :global(.vtex-input__suffix)
+    :nth-child(even)::after {
+    content: "";
+  }
 }
 
 /* Home */
