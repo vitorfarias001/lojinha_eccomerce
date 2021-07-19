@@ -12,14 +12,16 @@
     ]
   },
   "flex-layout.row#footer-1-desktop": {
+    "props": {
+      "blockClass": "footer1Row",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
     "children": [
       "vtex.menu@2.x:menu#categorias",
       "vtex.menu@2.x:menu#footerInstitucional",
       "vtex.menu@2.x:menu#faleConosco"
-    ],
-    "props": {
-      "blockClass": "footer1Row"
-    }
+    ]
   },
   "flex-layout.row#footer-2-desktop": {
     "children": ["rich-text#footer"],
@@ -29,11 +31,10 @@
   },
   "rich-text#footer": {
     "props": {
-      "text": "All stock and product photos are from photos.icons8.com",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus proin neque montes, eget. Porta et diam nunc in massa turpis ultricies. Nibh ullamcorper id tellus volutpat elementum morbi egestas nulla id. In in in leo sed mattis.",
       "blockClass": "footer"
     }
   },
-
   "footer-layout.mobile": {
     "children": [
       "flex-layout.row#1-footer-mobile",
@@ -70,7 +71,7 @@
   },
   "rich-text#footer-mobile": {
     "props": {
-      "text": "All stock and product photos are from photos.icons8.com",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus proin neque montes, eget. Porta et diam nunc in massa turpis ultricies. Nibh ullamcorper id tellus volutpat elementum morbi egestas nulla id. In in in leo sed mattis.",
       "blockClass": "footer"
     }
   }
