@@ -238,6 +238,37 @@
   display: none;
 }
 
+.sliderArrows {
+  margin: 0;
+
+  width: 32px;
+  height: 32px;
+  background: white !important;
+  border-radius: 50%;
+
+  color: transparent;
+  box-shadow: 0px 0px 8px #00000029;
+}
+
+.sliderArrows:disabled {
+  cursor: not-allowed;
+}
+
+.sliderRightArrow {
+  rotate: 180deg;
+  right: -54px;
+}
+
+.sliderLeftArrow {
+  left: -54px;
+}
+
+.caretIcon {
+  width: 7px;
+  height: 12px;
+  background: url("assets/images/arrow.svg") no-repeat center;
+}
+
 .shelfContainer {
   display: flex;
   justify-content: center;
@@ -290,6 +321,7 @@
   height: 2px;
   background: white;
 }
+
 .minumumSign--vertical {
   width: 12px;
   height: 2px;
