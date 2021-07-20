@@ -8,7 +8,6 @@ import { SliderLayout } from 'vtex.slider-layout'
 import { Button, Input } from 'vtex.styleguide'
 
 import { IShelf } from './typings/shelf'
-import logo from './img/Imagem.png'
 
 const CSS_HANDLES = [
   'shelfTwo',
@@ -30,6 +29,7 @@ const CSS_HANDLES = [
   'Discount',
   'discountContainer',
   'discountContent',
+  '',
 ]
 
 const valueOff = (value: number) => {
@@ -63,9 +63,6 @@ const Shelf = ({ discount }: ShelfProps) => {
   return (
     <div className={`${handles.shelfTwo}`}>
       <div className={`${handles.shelfContainerTwo}`}>
-        <div className={`${handles.image}`}>
-          <img src={logo} />
-        </div>
         <SliderLayout
           itemsPerPage={{ desktop: 2, phone: 2 }}
           className={`${handles.sliderLayoutContainer}`}

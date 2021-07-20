@@ -6,16 +6,16 @@ export default class Status extends ExternalClient {
     super('http://httpstat.us', context, options)
   }
 
-  public async getStatus(status: number): Promise<string> {
-    return this.http.get(status.toString(), {
+  public async getStatus(email: string): Promise<string> {
+    return this.http.get(email.toString(), {
       metric: 'status-get',
     })
   }
 
   public async getStatusWithHeaders(
-    status: number
+    email: string
   ): Promise<IOResponse<string>> {
-    return this.http.getRaw(status.toString(), {
+    return this.http.getRaw(email.toString(), {
       metric: 'status-get-raw',
     })
   }

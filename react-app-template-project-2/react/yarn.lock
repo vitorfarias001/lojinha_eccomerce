@@ -1762,9 +1762,9 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-"avantivtexio.ic2-project-2-app@https://ic2projectrodrigo--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626718992/public/@types/avantivtexio.ic2-project-2-app":
+"avantivtexio.ic2-project-2-app@https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626727815/public/@types/avantivtexio.ic2-project-2-app":
   version "0.1.0"
-  resolved "https://ic2projectrodrigo--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626718992/public/@types/avantivtexio.ic2-project-2-app#68386446eaad601357b776f990d062a2f4db7a64"
+  resolved "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626727815/public/@types/avantivtexio.ic2-project-2-app#3ca43ab79822682acb8cf89e44f85468247b708e"
 
 aws-sign2@~0.7.0:
   version "0.7.0"

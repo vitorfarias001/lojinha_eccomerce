@@ -1,10 +1,15 @@
+/* eslint-disable no-console */
+/* eslint-disable import/newline-after-import */
+/* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
 import { LRUCache, method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
 import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
-
+import { createUser, getUser } from './middlewares/index'
 const TIMEOUT_MS = 800
 
 // Create a LRU memory cache for the Status client.
@@ -39,7 +44,7 @@ declare global {
     code: number
   }
 }
-
+console.log(createUser)
 // Export a service that defines route handlers and client options.
 export default new Service({
   clients,
@@ -47,6 +52,12 @@ export default new Service({
     // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
     status: method({
       GET: [validate, status],
+    }),
+    createUser: method({
+      POST: [createUser],
+    }),
+    getUser: method({
+      GET: [getUser],
     }),
   },
 })
