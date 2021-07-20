@@ -208,10 +208,32 @@
 
 /*SHELF (4)*/
 
+.slide {
+  width: 200px !important;
+  min-height: 100%;
+}
+
 .sliderLayoutContainer {
-  width: 1070px;
+  width: 908px;
   display: flex;
 }
+
+.shelfItem,
+.itemContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productImage {
+  max-width: none;
+  width: 184px;
+  height: 172px;
+  object-fit: cover;
+  margin: 0 auto 16px;
+}
+
 .paginationDotsContainer {
   display: none;
 }
@@ -222,9 +244,14 @@
 .sliderRightArrow {
   display: none;
 }
+
 .shelfContainer {
   display: flex;
   justify-content: center;
+}
+
+.shelfItem {
+  width: 100%;
 }
 
 .subtitleContent {
@@ -242,20 +269,46 @@
 .countContainer {
   display: flex;
   justify-content: center;
+  gap: 8px;
+
+  height: 32px;
+
+  margin-top: 16px;
 }
 .countContainer :global(.vtex-button) {
   border-radius: 50%;
   width: 32px;
-  height: 32px;
+  min-height: 32px;
+  border: none;
 }
 
 .inputCount {
-  width: 100px;
+  width: 48px;
+}
+
+.inputCount :global(.vtex-input) {
+  display: block;
+  height: 100%;
+}
+
+.inputCount :global(.vtex-input-prefix__group) {
+  height: 100%;
+  border-width: 1px;
+  background: white;
+}
+
+.inputCount :global(.vtex-styleguide-9-x-input) {
+  padding: 0;
+  text-align: center;
+
+  color: #1b4d9b;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .valueShelf {
   display: flex;
-  gap: 80px;
+  justify-content: space-between;
   margin-top: 19px;
 }
 
@@ -274,35 +327,20 @@
   margin-top: 16px;
 }
 
-.countContainer {
-  margin-top: 16px;
-}
-
-.minimumButton {
-  position: relative;
-  right: 8px;
-}
-
-.maximumButton {
-  position: relative;
-  left: 8px;
-}
-
-.renderImage {
-  width: 160px;
-}
-
 .minimumButton :global(.vtex-button__label) {
   position: relative;
-  right: 10px;
-  font-size: 40px;
+  font-size: 32px;
+  padding: 0 !important;
+  height: 32px;
+  width: 32px;
 }
 
 .maximumButton :global(.vtex-button__label) {
   position: relative;
-  right: 10px;
-  font-size: 34px;
-  top: -2px;
+  font-size: 32px;
+  padding: 0 !important;
+  height: 32px;
+  width: 32px;
 }
 
 .discountContent {
@@ -315,8 +353,9 @@
   width: 90px;
   border-radius: 4px;
   color: #fff;
-  position: relative;
-  top: 30px;
+  position: absolute;
+  top: 12px;
+  left: 0;
 }
 
 /*SHELF 2 ITEMS*/
