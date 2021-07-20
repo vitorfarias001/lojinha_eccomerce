@@ -285,6 +285,19 @@
   font-weight: bold;
 }
 
+.minumumSign {
+  width: 12px;
+  height: 2px;
+  background: white;
+}
+.minumumSign--vertical {
+  width: 12px;
+  height: 2px;
+  background: white;
+  rotate: 90deg;
+  position: absolute;
+}
+
 .countContainer {
   display: flex;
   justify-content: center;
@@ -294,6 +307,7 @@
 
   margin-top: 16px;
 }
+
 .countContainer :global(.vtex-button) {
   border-radius: 50%;
   width: 32px;

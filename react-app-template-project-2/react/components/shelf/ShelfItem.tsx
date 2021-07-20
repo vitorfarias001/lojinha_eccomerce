@@ -20,6 +20,7 @@ const CSS_HANDLES = [
   'countContainer',
   'minimumButton',
   'maximumButton',
+  'minumumSign',
   'inputCount',
   'productImage',
   'valueShelf',
@@ -78,13 +79,18 @@ const ShelfItem = ({ item, discount }: ShelfItemProps) => {
           {item.items[0].sellers[0].commertialOffer.IsAvailable ? (
             <div className={`${handles.countContainer}`}>
               <div className={`${handles.minimumButton}`}>
-                <Button onClick={decrement}>-</Button>
+                <Button onClick={decrement}>
+                  <div className={handles.minumumSign} />
+                </Button>
               </div>
               <div className={`${handles.inputCount}`}>
                 <Input type="text" readOnly value={counter} />
               </div>
               <div className={`${handles.maximumButton}`}>
-                <Button onClick={incremeant}>+</Button>
+                <Button onClick={incremeant}>
+                  <div className={`${handles.minumumSign}`} />
+                  <div className={`${handles.minumumSign}--vertical`} />
+                </Button>
               </div>
             </div>
           ) : (
