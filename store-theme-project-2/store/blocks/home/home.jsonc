@@ -12,6 +12,7 @@
       "rich-text#homeTxtShelf1Desk",
       "flex-layout.row#imageshelfdesk",
       "avantivtexio.ic2-project-2-app:shelftwoitems",
+      "__fold__",
       "flex-layout.row#homeBannerDeskRow",
       "rich-text#homeTxtShelf2Desk",
       "avantivtexio.ic2-project-2-app:shelf",
@@ -112,10 +113,12 @@
     "children": [
       "flex-layout.row#homeBannerMobileRow",
       "rich-text#homeTxtShelf1Desk",
-      "flex-layout.row#shelf",
+      "avantivtexio.ic2-project-2-app:shelftwoitems",
+      "__fold__.experimentalLazyAssets",
       "flex-layout.row#homeBanner2MobileRow",
       "rich-text#homeTxtShelf2Desk",
-      "flex-layout.row#shelf"
+      "avantivtexio.ic2-project-2-app:shelf",
+      "newsletter-project-2"
     ]
   },
   "flex-layout.row#homeBannerMobileRow": {

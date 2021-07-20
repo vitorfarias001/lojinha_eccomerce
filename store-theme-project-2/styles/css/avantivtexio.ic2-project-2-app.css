@@ -70,13 +70,13 @@
   column-gap: 45px;
 
   height: 112px;
-  width: 303px;
+  width: 363px;
   margin-left: 266px;
 }
 
 .subMenuItem {
   height: 22px;
-  width: 70px;
+  width: 90px;
 }
 
 .subMenuLink {
@@ -146,6 +146,9 @@
   .menuFooterContainer {
     height: auto;
   }
+  .image {
+    display: none;
+  }
 }
 
 /*NEWSLETTER*/
@@ -153,45 +156,59 @@
   display: flex;
   justify-content: center;
   text-align: left;
-  margin-top: 73px;
-  width: 908px;
-  margin: 0 auto;
+
+  max-width: 908px;
+
+  margin: 73px auto 86px;
 }
+
 .newsletter {
-  height: 100px;
-  margin-right: 30px;
+  margin-right: 36px;
+  width: 260px;
 }
+
 .newsletterTitle {
-  position: relative;
-  letter-spacing: 6px;
   color: #1b4d9b;
   font-size: 24px;
   font-weight: bold;
 }
 
 .newsletterSubTitle {
-  position: relative;
   font-size: 14px;
   color: #202020;
 }
 
-.newsletterContainer :global(.vtex-input) {
-  width: 213px;
-  height: 51px;
-  margin-left: 36px;
-  position: relative;
-  top: -15px;
-}
-
 .placeholderContainer {
   display: flex;
-  margin-right: 36px;
+  height: 51px;
 }
+
+.newsletterContainer :global(.vtex-input) {
+  display: block;
+  width: 213px;
+  height: 51px;
+}
+
+.placeholderContainer :global(.vtex-input-prefix__group) {
+  height: 100%;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: #eee;
+}
+
+.placeholderContainer :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: #4f4f4f;
+  font-size: 14px;
+  opacity: 1;
+}
+
 .placeholderName {
-  margin-right: 36px;
+  display: flex;
+  margin-right: 30px;
 }
+
 .placeholderEmail {
-  margin-right: 36px;
+  margin-right: 20px;
 }
 
 .vtex-input-prefix__group {
@@ -202,10 +219,41 @@
 .buttonContent :global(.vtex-button) {
   width: 144px;
   height: 51px;
+  border-radius: 8px;
 }
 
 .buttonContent :global(.vtex-button__label) {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+  .newsletterContainer {
+    width: 377px;
+    flex-direction: column;
+    margin: 148px auto 82px;
+  }
+  .newsletter {
+    margin: 0 0 18px;
+    width: 100%;
+  }
+  .placeholderContainer {
+    height: auto;
+    flex-direction: column;
+  }
+  .placeholderName {
+    margin: 0 0 10px;
+  }
+  .placeholderEmail {
+    margin: 0;
+  }
+  .buttonContent {
+    display: flex;
+    justify-content: center;
+    margin-top: 43px;
+  }
+  .newsletterContainer :global(.vtex-input) {
+    width: 100%;
+  }
 }
 
 /*SHELF (4)*/
@@ -216,7 +264,7 @@
 }
 
 .sliderLayoutContainer {
-  width: 908px;
+  max-width: 908px;
   display: flex;
 }
 
@@ -240,11 +288,35 @@
   display: none;
 }
 
-.sliderLeftArrow {
-  display: none;
+.sliderArrows {
+  margin: 0;
+
+  width: 32px;
+  height: 32px;
+  background: white !important;
+  border-radius: 50%;
+
+  color: transparent;
+  box-shadow: 0px 0px 8px #00000029;
 }
+
+.sliderArrows:disabled {
+  cursor: not-allowed;
+}
+
 .sliderRightArrow {
-  display: none;
+  rotate: 180deg;
+  right: -54px;
+}
+
+.sliderLeftArrow {
+  left: -54px;
+}
+
+.caretIcon {
+  width: 7px;
+  height: 12px;
+  background: url("assets/images/arrow.svg") no-repeat center;
 }
 
 .shelfContainer {
@@ -257,17 +329,57 @@
 }
 
 .subtitleContent {
+  height: 66px;
+
   font-weight: bold;
   color: #4f4f4f;
+  line-height: 22px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: clip;
+}
+
+.buttonContainer,
+.buttonContainer--unavailable {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
 }
 
 .buttonContainer :global(.vtex-button) {
   width: 200px;
   height: 38px;
+  border-radius: 8px;
   background: #008939;
   border-color: #008939;
   font-weight: bold;
 }
+
+.buttonContainer--unavailable :global(.vtex-button) {
+  width: 200px;
+  height: 38px;
+  border-radius: 8px;
+  background: #3e4742;
+  border-color: #3e4742;
+  font-weight: bold;
+}
+
+.minumumSign {
+  width: 12px;
+  height: 2px;
+  background: white;
+}
+
+.minumumSign--vertical {
+  width: 12px;
+  height: 2px;
+  background: white;
+  rotate: 90deg;
+  position: absolute;
+}
+
 .countContainer {
   display: flex;
   justify-content: center;
@@ -277,11 +389,13 @@
 
   margin-top: 16px;
 }
+
 .countContainer :global(.vtex-button) {
   border-radius: 50%;
   width: 32px;
   min-height: 32px;
   border: none;
+  box-shadow: 0px 0px 8px #00000040;
 }
 
 .inputCount {
@@ -323,12 +437,6 @@
   font-weight: bold;
 }
 
-.buttonContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-}
-
 .minimumButton :global(.vtex-button__label) {
   position: relative;
   font-size: 32px;
@@ -350,14 +458,63 @@
 }
 
 .discountContainer {
-  padding: 5px 10px;
   background: #df2f1a;
-  width: 90px;
+  width: 84px;
+  height: 22px;
   border-radius: 4px;
   color: #fff;
   position: absolute;
   top: 12px;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .slide {
+    width: 169px !important;
+  }
+  .productImage {
+    width: 155px;
+    height: 145px;
+    margin-bottom: 13px;
+  }
+  .valueShelf {
+    font-size: 13px;
+    margin-top: 16px;
+  }
+  .discountContainer {
+    width: 71px;
+    height: 19px;
+  }
+  .discountContent {
+    font-size: 13px;
+  }
+  .countContainer {
+    height: 27px;
+  }
+  .countContainer :global(.vtex-button) {
+    width: 27px;
+    min-height: 27px;
+  }
+  .inputCount {
+    width: 40px;
+  }
+  .maximumButton :global(.vtex-button__label) {
+    width: 27px;
+    height: 27px;
+  }
+  .minimumButton :global(.vtex-button__label) {
+    width: 27px;
+    height: 27px;
+  }
+  .sliderRightArrow {
+    right: 10px;
+  }
+  .sliderLeftArrow {
+    left: 10px;
+  }
 }
 
 /*SHELF 2 ITEMS*/
@@ -365,24 +522,24 @@
 .shelfTwo {
   display: flex;
   justify-content: flex-end;
-  width: 908px;
-  margin: 0 auto;
+  max-width: 908px;
+  margin: 0 auto 70px auto;
 }
 
-.shelfContainerTwo{
+.shelfContainerTwo {
   display: flex;
-  position: relative;
-  right: 17.5px;
+  width: 100%;
 }
 
-.image{
+.image {
   width: 100%;
   padding: 20px;
   position: relative;
   left: 140px;
 }
 
-.sliderTrackContainer{
-  position: relative;
-  top: -24px;
+@media only screen and (max-width: 1024px) {
+  .shelfTwo {
+    margin: 0 auto 50px auto;
+  }
 }
