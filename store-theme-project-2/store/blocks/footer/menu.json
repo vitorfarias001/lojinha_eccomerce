@@ -224,8 +224,9 @@
     "props": {
       "blockClass": "footerMenuPagamentoRowMobile"
     },
-    "children": []
+    "children": ["image#footerMobilePagamentos"]
   },
+  "image#footerMobilePagamentos": {},
   "vtex.menu@2.x:menu#selos": {
     "props": {
       "orientation": "vertical",

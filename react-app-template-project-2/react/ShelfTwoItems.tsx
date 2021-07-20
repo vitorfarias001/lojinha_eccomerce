@@ -5,52 +5,25 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useCssHandles } from 'vtex.css-handles'
 import { SliderLayout } from 'vtex.slider-layout'
-import { Button, Input } from 'vtex.styleguide'
 
 import { IShelf } from './typings/shelf'
 import logo from './img/Imagem.png'
+import ShelfItem from './components/shelf/ShelfItem'
 
 const CSS_HANDLES = [
   'shelfTwo',
   'shelfContainerTwo',
   'image',
-  'titleShelf',
-  'shelfImage',
-  'renderImage',
-  'subtitleShelf',
-  'subtitleContent',
   'sliderLayoutContainer',
-  'buttonContainer',
-  'countContainer',
-  'minimumButton',
-  'maximumButton',
-  'inputCount',
-  'valueShelf',
-  'valueOff',
-  'Discount',
-  'discountContainer',
-  'discountContent',
 ]
 
-const valueOff = (value: number) => {
-  return value.toLocaleString('pt-BR', {
-    currency: 'BRL',
-    maximumFractionDigits: 2,
-    minimumFractionDigits: 2,
-  })
+type ShelfTwoItemsProps = {
+  discount: number
 }
 
-const Shelf = ({ discount }: ShelfProps) => {
+const ShelfTwoItems = ({ discount }: ShelfTwoItemsProps) => {
   const handles = useCssHandles(CSS_HANDLES)
   const [shelfWoman, setShelfWoman] = useState<IShelf[]>([])
-  const [counter, setCounter] = useState(0)
-  const incremeant = () => {
-    setCounter((c) => c + 1)
-  }
-
-  const decrement = () => {
-    setCounter((c) => (!c ? c : c - 1))
-  }
 
   useEffect(() => {
     axios
@@ -72,52 +45,7 @@ const Shelf = ({ discount }: ShelfProps) => {
         >
           {shelfWoman.map((item) => {
             return (
-              <div className={`${handles.shelfImage}`}>
-                <div className={`${handles.discountContainer}`}>
-                  <div className={`${handles.discountContent}`}>
-                    {discount}% OFF
-                  </div>
-                </div>
-                <div className={`${handles.renderImage}`}>
-                  <img
-                    src={item.items[0].images[0].imageUrl}
-                    alt={item.items[0].name}
-                  />
-                  <div className={`${handles.subtitleShelf}`}>
-                    <div className={`${handles.subtitleContent}`}>
-                      <div>{item.items[0].name}</div>
-                    </div>
-                    <div className={`${handles.valueShelf}`}>
-                      <div className={`${handles.valueOff}`}>
-                        R$
-                        {valueOff(
-                          item.items[0].sellers[0].commertialOffer.Price * 0.9
-                        )}
-                      </div>
-                      <div className={`${handles.Discount}`}>
-                        R$
-                        {valueOff(
-                          item.items[0].sellers[0].commertialOffer.Price
-                        )}
-                      </div>
-                    </div>
-                    <div className={`${handles.countContainer}`}>
-                      <div className={`${handles.minimumButton}`}>
-                        <Button onClick={decrement}> - </Button>
-                      </div>
-                      <div className={`${handles.inputCount}`}>
-                        <Input type="text" readOnly value={counter} />
-                      </div>
-                      <div className={`${handles.maximumButton}`}>
-                        <Button onClick={incremeant}> + </Button>
-                      </div>
-                    </div>
-                    <div className={`${handles.buttonContainer}`}>
-                      <Button>Adicionar</Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ShelfItem item={item} discount={discount} key={item.productId} />
             )
           })}
         </SliderLayout>
@@ -126,10 +54,7 @@ const Shelf = ({ discount }: ShelfProps) => {
   )
 }
 
-type ShelfProps = {
-  discount: number
-}
-Shelf.schema = {
+ShelfTwoItems.schema = {
   title: 'Shelf',
   description: 'Shelf Items',
   type: 'object',
@@ -143,4 +68,4 @@ Shelf.schema = {
   },
 }
 
-export default Shelf
+export default ShelfTwoItems

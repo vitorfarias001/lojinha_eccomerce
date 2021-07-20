@@ -1,3 +1,36 @@
+/* Home shelf titles */
+
+.paragraph--homeTxtShelf1Desk,
+.paragraph--homeTxtShelf2Desk {
+  margin: 0;
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 9.6px;
+  font-family: "Raleway", sans-serif;
+}
+
+.container--homeTxtShelf1Desk {
+  margin: 40px 0 55px 0;
+}
+
+.container--homeTxtShelf2Desk {
+  margin: 58px 0 57px 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .paragraph--homeTxtShelf1Desk,
+  .paragraph--homeTxtShelf2Desk {
+    font-size: 17px;
+    letter-spacing: 5.4px;
+  }
+  .container--homeTxtShelf1Desk {
+    margin: 31px 0 37px 0;
+  }
+
+  .container--homeTxtShelf2Desk {
+    margin: 39px 0 37px 0;
+  }
+}
 /* Footer */
 .wrapper--footer {
   margin: 0 auto;
@@ -16,136 +49,4 @@
 
 .paragraph--footerMobile {
   width: 374px;
-}
-
-/* Default css */
-.container--deals {
-  color: #ffffff;
-  text-align: center;
-  justify-content: center;
-}
-
-.container--shelfTitle {
-  color: #727273;
-  justify-content: center;
-  text-align: center;
-}
-
-.headingLevel2--shelfTitle {
-  font-weight: 200;
-}
-
-.container--deals .paragraph {
-  margin: 0;
-}
-
-.container--link {
-  justify-content: center;
-}
-
-.container--question {
-  justify-content: center;
-}
-
-.container--question .paragraph {
-  text-align: center;
-  max-width: 540px;
-  margin: 0 16px;
-  padding-top: 120px;
-  color: #03034e;
-}
-
-.container--question .strong {
-  font-size: 32px;
-  line-height: 2rem;
-  font-weight: 700;
-}
-
-.container--link .paragraph {
-  text-align: center;
-  max-width: 540px;
-  padding-top: 36px;
-  padding-bottom: 84px;
-  color: #03034e;
-}
-
-.container--link .strong {
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.container--link .link {
-  text-decoration: none;
-  font-size: 36px;
-  font-weight: 300;
-  color: #03034e;
-}
-
-.container--title {
-  color: #03034e;
-  font-size: 28px;
-  font-weight: 700;
-}
-.container--text {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 73px;
-  margin-top: 73px;
-}
-
-.wrapper--text {
-  width: 864px;
-}
-.wrapper--text-shelf {
-  display: flex;
-  width: 1900px;
-  justify-content: center;
-}
-
-.paragraph--text {
-  display: flex;
-  text-align: center;
-  width: 938px;
-  color: #707070;
-}
-
-.paragraph--text-shelf {
-  font-weight: bold;
-  font-size: 35px;
-  font-family: "Raleway", sans-serif;
-  margin-bottom: 57px;
-  margin-top: 57px;
-}
-.wrapper--homeTxtShelf2Desk{
-  font-weight: bold;
-  font-size: 35px;
-  font-family: 'Raleway', sans-serif;
-
-}
-.wrapper--homeTxtShelf1Desk{
-  font-weight: bold;
-  font-size: 35px;
-  font-family: 'Raleway', sans-serif;
-}
-@media only screen and (min-width: 640px) {
-  .container--question .strong {
-    font-size: 40px;
-    line-height: 3rem;
-  }
-
-  .container--about {
-    max-width: 85%;
-  }
-
-  .container--title {
-    color: #03034e;
-    font-size: 40px;
-    font-weight: 700;
-    max-width: 60%;
-  }
-
-  .container--title .paragraph {
-    line-height: 1.3em;
-  }
 }
