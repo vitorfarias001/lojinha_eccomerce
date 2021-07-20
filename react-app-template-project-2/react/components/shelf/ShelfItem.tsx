@@ -63,7 +63,7 @@ const ShelfItem = ({ item, discount }: ShelfItemProps) => {
         />
         <div className={`${handles.subtitleShelf}`}>
           <div className={`${handles.subtitleContent}`}>
-            <div>{item.items[0].name}</div>
+            {item.items[0].name}
           </div>
           <div className={`${handles.valueShelf}`}>
             <div className={`${handles.Discount}`}>
@@ -75,19 +75,33 @@ const ShelfItem = ({ item, discount }: ShelfItemProps) => {
               {valueOff(item.items[0].sellers[0].commertialOffer.Price * 0.9)}
             </div>
           </div>
-          <div className={`${handles.countContainer}`}>
-            <div className={`${handles.minimumButton}`}>
-              <Button onClick={decrement}>-</Button>
+          {item.items[0].sellers[0].commertialOffer.IsAvailable ? (
+            <div className={`${handles.countContainer}`}>
+              <div className={`${handles.minimumButton}`}>
+                <Button onClick={decrement}>-</Button>
+              </div>
+              <div className={`${handles.inputCount}`}>
+                <Input type="text" readOnly value={counter} />
+              </div>
+              <div className={`${handles.maximumButton}`}>
+                <Button onClick={incremeant}>+</Button>
+              </div>
             </div>
-            <div className={`${handles.inputCount}`}>
-              <Input type="text" readOnly value={counter} />
-            </div>
-            <div className={`${handles.maximumButton}`}>
-              <Button onClick={incremeant}>+</Button>
-            </div>
-          </div>
-          <div className={`${handles.buttonContainer}`}>
-            <Button>Adicionar</Button>
+          ) : (
+            <div className={`${handles.countContainer}`} />
+          )}
+          <div
+            className={`${
+              item.items[0].sellers[0].commertialOffer.IsAvailable
+                ? `${handles.buttonContainer}`
+                : `${handles.buttonContainer}--unavailable`
+            }`}
+          >
+            <Button>
+              {item.items[0].sellers[0].commertialOffer.IsAvailable
+                ? 'Adicionar'
+                : 'Indisponível'}
+            </Button>
           </div>
         </div>
       </div>

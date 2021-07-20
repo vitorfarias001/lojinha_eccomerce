@@ -238,13 +238,6 @@
   display: none;
 }
 
-.sliderLeftArrow {
-  display: none;
-}
-.sliderRightArrow {
-  display: none;
-}
-
 .shelfContainer {
   display: flex;
   justify-content: center;
@@ -255,17 +248,43 @@
 }
 
 .subtitleContent {
+  height: 66px;
+
   font-weight: bold;
   color: #4f4f4f;
+  line-height: 22px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: clip;
+}
+
+.buttonContainer,
+.buttonContainer--unavailable {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
 }
 
 .buttonContainer :global(.vtex-button) {
   width: 200px;
   height: 38px;
+  border-radius: 8px;
   background: #008939;
   border-color: #008939;
   font-weight: bold;
 }
+
+.buttonContainer--unavailable :global(.vtex-button) {
+  width: 200px;
+  height: 38px;
+  border-radius: 8px;
+  background: #3e4742;
+  border-color: #3e4742;
+  font-weight: bold;
+}
+
 .countContainer {
   display: flex;
   justify-content: center;
@@ -280,6 +299,7 @@
   width: 32px;
   min-height: 32px;
   border: none;
+  box-shadow: 0px 0px 8px #00000040;
 }
 
 .inputCount {
@@ -319,12 +339,6 @@
 
 .valueOff {
   font-weight: bold;
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
 }
 
 .minimumButton :global(.vtex-button__label) {
@@ -367,20 +381,20 @@
   margin: 0 auto;
 }
 
-.shelfContainerTwo{
+.shelfContainerTwo {
   display: flex;
   position: relative;
   right: 17.5px;
 }
 
-.image{
+.image {
   width: 100%;
   padding: 20px;
   position: relative;
   left: 140px;
 }
 
-.sliderTrackContainer{
+.sliderTrackContainer {
   position: relative;
   top: -24px;
 }
