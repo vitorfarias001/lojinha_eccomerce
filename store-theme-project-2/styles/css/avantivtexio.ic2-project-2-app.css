@@ -327,3 +327,21 @@
   width: 908px;
   margin: 0 auto;
 }
+
+.shelfContainerTwo{
+  display: flex;
+  position: relative;
+  right: 17.5px;
+}
+
+.image{
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  left: 140px;
+}
+
+.sliderTrackContainer{
+  position: relative;
+  top: -24px;
+}

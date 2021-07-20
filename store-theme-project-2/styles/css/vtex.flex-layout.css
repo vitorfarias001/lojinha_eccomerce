@@ -76,6 +76,11 @@
   padding-left: 20px;
 }
 
+/*store theme image*/
+.flexRow--homeBannerDesk{
+  margin-top: 60px;
+}
+
 /* Store theme default*/
 .flexRowContent--menu-link,
 .flexRowContent--main-header {

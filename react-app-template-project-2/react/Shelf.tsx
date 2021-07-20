@@ -1,9 +1,12 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable no-use-before-define */
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useCssHandles } from 'vtex.css-handles'
-import { IShelf } from './typings/shelf'
 import { SliderLayout } from 'vtex.slider-layout'
 import { Button, Input } from 'vtex.styleguide'
+
+import { IShelf } from './typings/shelf'
 
 const CSS_HANDLES = [
   'shelfTwo',
@@ -24,6 +27,7 @@ const CSS_HANDLES = [
   'discountContainer',
   'discountContent',
 ]
+
 const valueOff = (value: number) => {
   return value.toLocaleString('pt-BR', {
     currency: 'BRL',
@@ -39,9 +43,11 @@ const Shelf = ({ discount }: ShelfProps) => {
   const incremeant = () => {
     setCounter((c) => c + 1)
   }
+
   const decrement = () => {
     setCounter((c) => (!c ? c : c - 1))
   }
+
   useEffect(() => {
     axios
       .get('/api/catalog_system/pub/products/search/woman')
@@ -49,6 +55,7 @@ const Shelf = ({ discount }: ShelfProps) => {
         setShelfWoman(response.data)
       })
   }, [])
+
   return (
     <div className={`${handles.shelfContainer}`}>
       <SliderLayout itemsPerPage={{ desktop: 4, phone: 2 }}>
