@@ -43,12 +43,6 @@
       "flex-layout.row#footer2RowMobile"
     ]
   },
-  "flex-layout.row#footer2RowMobile": {
-    "props": {
-      "blockClass": "footer2RowMobile"
-    },
-    "children": ["rich-text#footer-mobile"]
-  },
   "flex-layout.row#footer1RowMobile": {
     "props": {
       "blockClass": "footer1RowMobile"
@@ -66,6 +60,12 @@
       "vtex.menu@2.x:menu#footerInstitucional",
       "vtex.menu@2.x:menu#faleConosco"
     ]
+  },
+  "flex-layout.row#footer2RowMobile": {
+    "props": {
+      "blockClass": "footer2RowMobile"
+    },
+    "children": ["rich-text#footer-mobile"]
   },
   "rich-text#footer-mobile": {
     "props": {

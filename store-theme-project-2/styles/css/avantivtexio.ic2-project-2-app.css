@@ -156,43 +156,59 @@
   display: flex;
   justify-content: center;
   text-align: left;
-  margin-top: 73px;
+
+  max-width: 908px;
+
+  margin: 73px auto 86px;
 }
+
 .newsletter {
-  height: 100px;
-  margin-right: 30px;
+  margin-right: 36px;
+  width: 260px;
 }
+
 .newsletterTitle {
-  position: relative;
-  letter-spacing: 6px;
   color: #1b4d9b;
   font-size: 24px;
   font-weight: bold;
 }
 
 .newsletterSubTitle {
-  position: relative;
   font-size: 14px;
   color: #202020;
 }
 
-.newsletterContainer :global(.vtex-input) {
-  width: 213px;
-  height: 51px;
-  margin-left: 36px;
-  position: relative;
-  top: -15px;
-}
-
 .placeholderContainer {
   display: flex;
-  margin-right: 36px;
+  height: 51px;
 }
+
+.newsletterContainer :global(.vtex-input) {
+  display: block;
+  width: 213px;
+  height: 51px;
+}
+
+.placeholderContainer :global(.vtex-input-prefix__group) {
+  height: 100%;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: #eee;
+}
+
+.placeholderContainer :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: #4f4f4f;
+  font-size: 14px;
+  opacity: 1;
+}
+
 .placeholderName {
-  margin-right: 36px;
+  display: flex;
+  margin-right: 30px;
 }
+
 .placeholderEmail {
-  margin-right: 36px;
+  margin-right: 20px;
 }
 
 .vtex-input-prefix__group {
@@ -203,10 +219,41 @@
 .buttonContent :global(.vtex-button) {
   width: 144px;
   height: 51px;
+  border-radius: 8px;
 }
 
 .buttonContent :global(.vtex-button__label) {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+  .newsletterContainer {
+    width: 377px;
+    flex-direction: column;
+    margin: 148px auto 82px;
+  }
+  .newsletter {
+    margin: 0 0 18px;
+    width: 100%;
+  }
+  .placeholderContainer {
+    height: auto;
+    flex-direction: column;
+  }
+  .placeholderName {
+    margin: 0 0 10px;
+  }
+  .placeholderEmail {
+    margin: 0;
+  }
+  .buttonContent {
+    display: flex;
+    justify-content: center;
+    margin-top: 43px;
+  }
+  .newsletterContainer :global(.vtex-input) {
+    width: 100%;
+  }
 }
 
 /*SHELF (4)*/
