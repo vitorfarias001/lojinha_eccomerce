@@ -1,6 +1,8 @@
+/* eslint-disable no-use-before-define */
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { Input, Button } from 'vtex.styleguide'
+
 const CSS_HANDLES = [
   'newsletterContainer',
   'newsletter',
@@ -12,8 +14,10 @@ const CSS_HANDLES = [
   'placeholderEmail',
   'buttonContent',
 ]
+
 const Newsletter = () => {
   const handles = useCssHandles(CSS_HANDLES)
+
   return (
     <div className={`${handles.newsletterContainer}`}>
       <div className={`${handles.newsletter}`}>
@@ -24,10 +28,10 @@ const Newsletter = () => {
       </div>
       <div className={`${handles.placeholderContainer}`}>
         <div className={`${handles.placeholderName}`}>
-          <Input placeholder="Nome: "></Input>
+          <Input placeholder="Nome: " />
         </div>
         <div className={`${handles.placeholderEmail}`}>
-          <Input placeholder="Email: "></Input>
+          <Input placeholder="Email: " />
         </div>
         <div className={`${handles.buttonContent}`}>
           <Button variation="primary" size="regular">
