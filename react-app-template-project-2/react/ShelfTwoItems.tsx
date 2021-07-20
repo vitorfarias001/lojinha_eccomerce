@@ -36,9 +36,6 @@ const ShelfTwoItems = ({ discount }: ShelfTwoItemsProps) => {
   return (
     <div className={`${handles.shelfTwo}`}>
       <div className={`${handles.shelfContainerTwo}`}>
-        <div className={`${handles.image}`}>
-          <img src={logo} />
-        </div>
         <SliderLayout
           itemsPerPage={{ desktop: 2, phone: 2 }}
           className={`${handles.sliderLayoutContainer}`}

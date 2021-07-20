@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export async function status(ctx: Context, next: () => Promise<any>) {
   const {
     state: { code },
@@ -6,7 +9,7 @@ export async function status(ctx: Context, next: () => Promise<any>) {
 
   console.info('Received code:', code)
 
-  const statusResponse = await statusClient.getStatus(code)
+  const statusResponse = await statusClient.getStatus(String(code))
 
   console.info('Status response:', statusResponse)
 
@@ -14,7 +17,7 @@ export async function status(ctx: Context, next: () => Promise<any>) {
     headers,
     data,
     status: responseStatus,
-  } = await statusClient.getStatusWithHeaders(code)
+  } = await statusClient.getStatusWithHeaders(String(code))
 
   console.info('Status headers', headers)
   console.info('Status data:', data)

@@ -10,6 +10,7 @@
       /* "list-context.image-list#demo", */
       "flex-layout.row#homeBannerDeskRow",
       "rich-text#homeTxtShelf1Desk",
+      "flex-layout.row#imageshelfdesk",
       "avantivtexio.ic2-project-2-app:shelftwoitems",
       "__fold__",
       "flex-layout.row#homeBannerDeskRow",
@@ -24,7 +25,18 @@
     },
     "children": ["image#homeBannerDesk"]
   },
-
+  "flex-layout.row#imageshelfdesk":{
+    "props":{
+      "blockClass":"shelfContainer"
+    },
+    "children":["image#homeShelfImageDesk"]
+  },
+  "image#homeShelfImageDesk": {
+    "props": {
+      "blockClass": "homeShelfDesk",
+      "src": "assets/images/Imagem.png"
+    }
+  },
   "image#homeBannerDesk": {
     "props": {
       "blockClass": "homeBannerDesk",
