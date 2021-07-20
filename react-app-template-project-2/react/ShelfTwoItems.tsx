@@ -1,10 +1,15 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable no-use-before-define */
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useCssHandles } from 'vtex.css-handles'
-import { IShelf } from './typings/shelf'
 import { SliderLayout } from 'vtex.slider-layout'
 import { Button, Input } from 'vtex.styleguide'
+
+import { IShelf } from './typings/shelf'
 import logo from './img/Imagem.png'
+
 const CSS_HANDLES = [
   'shelfTwo',
   'shelfContainerTwo',
@@ -14,6 +19,7 @@ const CSS_HANDLES = [
   'renderImage',
   'subtitleShelf',
   'subtitleContent',
+  'sliderLayoutContainer',
   'buttonContainer',
   'countContainer',
   'minimumButton',
@@ -25,6 +31,7 @@ const CSS_HANDLES = [
   'discountContainer',
   'discountContent',
 ]
+
 const valueOff = (value: number) => {
   return value.toLocaleString('pt-BR', {
     currency: 'BRL',
@@ -40,9 +47,11 @@ const Shelf = ({ discount }: ShelfProps) => {
   const incremeant = () => {
     setCounter((c) => c + 1)
   }
+
   const decrement = () => {
     setCounter((c) => (!c ? c : c - 1))
   }
+
   useEffect(() => {
     axios
       .get('/api/catalog_system/pub/products/search/woman')
@@ -50,13 +59,17 @@ const Shelf = ({ discount }: ShelfProps) => {
         setShelfWoman(response.data)
       })
   }, [])
+
   return (
     <div className={`${handles.shelfTwo}`}>
       <div className={`${handles.shelfContainerTwo}`}>
-        <SliderLayout itemsPerPage={{ desktop: 2, phone: 2 }}>
-          <div className={`${handles.image}`}>
-            <img src={logo} />
-          </div>
+        <div className={`${handles.image}`}>
+          <img src={logo} />
+        </div>
+        <SliderLayout
+          itemsPerPage={{ desktop: 2, phone: 2 }}
+          className={`${handles.sliderLayoutContainer}`}
+        >
           {shelfWoman.map((item) => {
             return (
               <div className={`${handles.shelfImage}`}>
