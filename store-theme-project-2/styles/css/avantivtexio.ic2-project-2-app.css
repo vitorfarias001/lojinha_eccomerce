@@ -476,7 +476,7 @@
   display: flex;
   justify-content: flex-end;
   max-width: 908px;
-  margin: 0 auto;
+  margin: 0 auto 70px auto;
 }
 
 .shelfContainerTwo {
@@ -491,7 +491,8 @@
   left: 140px;
 }
 
-.sliderTrackContainer {
-  position: relative;
-  top: -24px;
+@media only screen and (max-width: 1024px) {
+  .shelfTwo {
+    margin: 0 auto 50px auto;
+  }
 }
