@@ -100,10 +100,11 @@
     "children": [
       "flex-layout.row#homeBannerMobileRow",
       "rich-text#homeTxtShelf1Desk",
-      "flex-layout.row#shelf",
+      "avantivtexio.ic2-project-2-app:shelftwoitems",
       "flex-layout.row#homeBanner2MobileRow",
       "rich-text#homeTxtShelf2Desk",
-      "flex-layout.row#shelf"
+      "avantivtexio.ic2-project-2-app:shelf",
+      "newsletter-project-2"
     ]
   },
   "flex-layout.row#homeBannerMobileRow": {

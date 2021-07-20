@@ -53,7 +53,7 @@
 }
 
 .subMenuContent {
-  width: 908px;
+  max-width: 908px;
 
   display: flex;
   align-items: center;
@@ -146,6 +146,9 @@
   .menuFooterContainer {
     height: auto;
   }
+  .image {
+    display: none;
+  }
 }
 
 /*NEWSLETTER*/
@@ -214,7 +217,7 @@
 }
 
 .sliderLayoutContainer {
-  width: 908px;
+  max-width: 908px;
   display: flex;
 }
 
@@ -408,14 +411,63 @@
 }
 
 .discountContainer {
-  padding: 5px 10px;
   background: #df2f1a;
-  width: 90px;
+  width: 84px;
+  height: 22px;
   border-radius: 4px;
   color: #fff;
   position: absolute;
   top: 12px;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .slide {
+    width: 169px !important;
+  }
+  .productImage {
+    width: 155px;
+    height: 145px;
+    margin-bottom: 13px;
+  }
+  .valueShelf {
+    font-size: 13px;
+    margin-top: 16px;
+  }
+  .discountContainer {
+    width: 71px;
+    height: 19px;
+  }
+  .discountContent {
+    font-size: 13px;
+  }
+  .countContainer {
+    height: 27px;
+  }
+  .countContainer :global(.vtex-button) {
+    width: 27px;
+    min-height: 27px;
+  }
+  .inputCount {
+    width: 40px;
+  }
+  .maximumButton :global(.vtex-button__label) {
+    width: 27px;
+    height: 27px;
+  }
+  .minimumButton :global(.vtex-button__label) {
+    width: 27px;
+    height: 27px;
+  }
+  .sliderRightArrow {
+    right: 10px;
+  }
+  .sliderLeftArrow {
+    left: 10px;
+  }
 }
 
 /*SHELF 2 ITEMS*/
@@ -423,14 +475,13 @@
 .shelfTwo {
   display: flex;
   justify-content: flex-end;
-  width: 908px;
+  max-width: 908px;
   margin: 0 auto;
 }
 
 .shelfContainerTwo {
   display: flex;
-  position: relative;
-  right: 17.5px;
+  width: 100%;
 }
 
 .image {
