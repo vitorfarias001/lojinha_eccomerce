@@ -53,7 +53,7 @@
 }
 
 .subMenuContent {
-  max-width: 908px;
+  width: 908px;
 
   display: flex;
   align-items: center;
@@ -70,13 +70,13 @@
   column-gap: 45px;
 
   height: 112px;
-  width: 303px;
+  width: 363px;
   margin-left: 266px;
 }
 
 .subMenuItem {
   height: 22px;
-  width: 70px;
+  width: 90px;
 }
 
 .subMenuLink {

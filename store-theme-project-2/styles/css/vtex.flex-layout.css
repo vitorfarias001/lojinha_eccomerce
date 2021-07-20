@@ -1,6 +1,6 @@
 /* Store theme header */
 .flexRow--headerDeskMainRow {
-  max-width: 908px;
+  width: 908px;
   margin: 0 auto;
 }
 
@@ -40,7 +40,7 @@
 
 /* Footer */
 .flexRow--footer1Row {
-  max-width: 908px;
+  width: 908px;
   margin: 0 auto;
 }
 
