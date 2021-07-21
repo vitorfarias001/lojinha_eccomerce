@@ -5718,9 +5718,9 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-"vtex.service-example@https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/vtex.service-example@0.2.0+build1626799532/public/_types/react":
+"vtex.service-example@https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/vtex.service-example@0.2.0+build1626880341/public/_types/react":
   version "0.0.0"
-  resolved "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/vtex.service-example@0.2.0+build1626799532/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+  resolved "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/vtex.service-example@0.2.0+build1626880341/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"

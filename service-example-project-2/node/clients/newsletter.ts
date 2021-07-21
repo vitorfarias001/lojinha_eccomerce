@@ -23,4 +23,18 @@ export default class Newsletter extends MasterData {
 
     return resp
   }
+
+  public async getAll() {
+    const resp = await this.searchDocumentsWithPaginationInfo({
+      dataEntity: 'newsletter',
+      schema: 'vitor',
+      fields: ['_all'],
+      pagination: {
+        page: 1,
+        pageSize: 800,
+      },
+    })
+    // eslint-disable-next-line padding-line-between-statements
+    return resp
+  }
 }
