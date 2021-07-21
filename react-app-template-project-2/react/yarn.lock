@@ -1762,9 +1762,9 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-"avantivtexio.ic2-project-2-app@https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626727815/public/@types/avantivtexio.ic2-project-2-app":
+"avantivtexio.ic2-project-2-app@https://ic2projectrodrigo--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626891922/public/@types/avantivtexio.ic2-project-2-app":
   version "0.1.0"
-  resolved "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626727815/public/@types/avantivtexio.ic2-project-2-app#3ca43ab79822682acb8cf89e44f85468247b708e"
+  resolved "https://ic2projectrodrigo--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1626891922/public/@types/avantivtexio.ic2-project-2-app#eae1c40270124142c87dc6abaf62631cb0b7e815"
 
 aws-sign2@~0.7.0:
   version "0.7.0"
@@ -4965,6 +4965,14 @@ verror@1.10.0:
 "vtex.css-handles@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.4/public/@types/vtex.css-handles":
   version "0.4.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.4/public/@types/vtex.css-handles#8c45c6decf9acd2b944e07261686decff93d6422"
+
+"vtex.order-items@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-items@0.13.1/public/@types/vtex.order-items":
+  version "0.13.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-items@0.13.1/public/@types/vtex.order-items#54122a2f6a9b6613b968313046f036ee0de355fe"
+
+"vtex.pixel-manager@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.8.0/public/@types/vtex.pixel-manager":
+  version "1.8.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.8.0/public/@types/vtex.pixel-manager#3ccfcb1927614984a5f7a3e5650c8c8d2bd3c0f4"
 
 "vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.130.0/public/@types/vtex.render-runtime":
   version "8.130.0"
