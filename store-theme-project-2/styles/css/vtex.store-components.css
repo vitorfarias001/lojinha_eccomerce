@@ -143,6 +143,11 @@
   width: 378px;
 }
 
+/* Footer */
+.imageElement--pagamentoImg {
+  padding-left: 5px;
+}
+
 .notificationBarContainer {
   background-color: #e6f1e6;
   color: #03034e;

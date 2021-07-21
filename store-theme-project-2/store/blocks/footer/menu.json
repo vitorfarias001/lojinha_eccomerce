@@ -218,20 +218,85 @@
       "orientation": "vertical",
       "blockClass": "pagamento"
     },
-    "children": ["flex-layout.row#footerMenuPagamentoRowMobile"]
+    "children": [
+      "menu-item#pagamentoTitle",
+      "flex-layout.row#footerMenuPagamentoRowMobile"
+    ]
+  },
+  "menu-item#pagamentoTitle": {
+    "props": {
+      "id": "pagamentoTitle",
+      "blockClass": ["pagamentoTitle", "footerTitle"],
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": true,
+        "tagTitle": "Pagamento",
+        "text": "Pagamento"
+      }
+    }
   },
   "flex-layout.row#footerMenuPagamentoRowMobile": {
     "props": {
-      "blockClass": "footerMenuPagamentoRowMobile"
+      "blockClass": "footerMenuPagamentoRowMobile",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
     },
     "children": ["image#footerMobilePagamentos"]
   },
-  "image#footerMobilePagamentos": {},
+  "image#footerMobilePagamentos": {
+    "props": {
+      "src": "assets/images/pagamentos.svg",
+      "alt": "Pagamentos",
+      "blockClass": "pagamentoImg"
+    }
+  },
   "vtex.menu@2.x:menu#selos": {
     "props": {
       "orientation": "vertical",
       "blockClass": "selos"
     },
-    "children": []
+    "children": ["menu-item#selosTitle", "flex-layout.row#footerMobileRowSelos"]
+  },
+  "menu-item#selosTitle": {
+    "props": {
+      "id": "selosTitle",
+      "blockClass": ["selosTitle", "footerTitle"],
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": true,
+        "tagTitle": "Selos",
+        "text": "Selos"
+      }
+    }
+  },
+  "flex-layout.row#footerMobileRowSelos": {
+    "props": {
+      "blockClass": "footerMobileRowSelos",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": ["image#seloEncrypt", "image#seloVtex"]
+  },
+  "image#seloEncrypt": {
+    "props": {
+      "src": "assets/images/encrypt-selo.png",
+      "alt": "Selo da Encrypt",
+      "blockClass": "encryptImg"
+    }
+  },
+  "image#seloVtex": {
+    "props": {
+      "src": "assets/images/vtex-selo.png",
+      "alt": "Selo da Vtex",
+      "blockClass": "vtexImg"
+    }
   }
 }
