@@ -12,6 +12,7 @@ import ShelfItem from './components/shelf/ShelfItem'
 const CSS_HANDLES = [
   'shelfTwo',
   'shelfContainerTwo',
+  'imageContainer',
   'image',
   'sliderLayoutContainerTwo',
 ]
@@ -35,10 +36,13 @@ const ShelfTwoItems = ({ discount }: ShelfTwoItemsProps) => {
   return (
     <div className={`${handles.shelfTwo}`}>
       <div className={`${handles.shelfContainerTwo}`}>
-        <SliderLayout
-          itemsPerPage={{ desktop: 2, phone: 2 }}
-          className={`${handles.sliderLayoutContainerTwo}`}
-        >
+        <div className={handles.imageContainer}>
+          <img
+            src="https://avantivtexio.vtexassets.com/assets/vtex/assets-builder/avantivtexio.ic2-store-theme-project-2/4.4.0/images/Imagem___d8d23cc355f560db715bccb57594e7dd.png"
+            className={handles.image}
+          />
+        </div>
+        <SliderLayout itemsPerPage={{ desktop: 2, phone: 2 }}>
           {shelfWoman.map((item) => {
             return (
               <ShelfItem item={item} discount={discount} key={item.productId} />

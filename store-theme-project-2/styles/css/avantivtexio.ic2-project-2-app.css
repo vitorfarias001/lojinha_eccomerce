@@ -2,7 +2,9 @@
 .menuContainer {
   display: flex;
   gap: 40px;
-  justify-content: center;
+  justify-content: space-between;
+  width: 512px;
+  margin-left: 266px;
 }
 
 .categoryName,
@@ -24,6 +26,7 @@
   text-decoration: none;
 
   display: block;
+  width: max-content;
 
   color: #202020;
   font-size: 14px;
@@ -305,7 +308,7 @@
 }
 
 .sliderRightArrow {
-  rotate: 180deg;
+  transform: rotate(180deg);
   right: -54px;
 }
 
@@ -376,7 +379,7 @@
   width: 12px;
   height: 2px;
   background: white;
-  rotate: 90deg;
+  transform: rotate(90deg);
   position: absolute;
 }
 
@@ -528,18 +531,45 @@
 
 .shelfContainerTwo {
   display: flex;
+  gap: 42px;
   width: 100%;
 }
 
-.image {
-  width: 100%;
-  padding: 20px;
-  position: relative;
-  left: 140px;
+.shelfContainerTwo .sliderLayoutContainer {
+  width: 445px;
+}
+
+.shelfContainerTwo .sliderLeftArrow {
+  left: -30px;
+}
+
+.shelfContainerTwo .sliderRightArrow {
+  right: -30px;
+}
+
+.imageContainer {
+  width: 422px;
+  height: 397px;
 }
 
 @media only screen and (max-width: 1024px) {
   .shelfTwo {
     margin: 0 auto 50px auto;
+  }
+
+  .imageContainer {
+    display: none;
+  }
+
+  .shelfContainerTwo .sliderLayoutContainer {
+    width: 100%;
+  }
+
+  .shelfContainerTwo .sliderLeftArrow {
+    left: 10px;
+  }
+
+  .shelfContainerTwo .sliderRightArrow {
+    right: 10px;
   }
 }

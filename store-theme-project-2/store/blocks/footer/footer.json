@@ -58,7 +58,9 @@
     "children": [
       "vtex.menu@2.x:menu#categorias",
       "vtex.menu@2.x:menu#footerInstitucional",
-      "vtex.menu@2.x:menu#faleConosco"
+      "vtex.menu@2.x:menu#faleConosco",
+      "vtex.menu@2.x:menu#pagamento",
+      "vtex.menu@2.x:menu#selos"
     ]
   },
   "flex-layout.row#footer2RowMobile": {
