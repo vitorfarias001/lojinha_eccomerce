@@ -11,7 +11,7 @@
       "flex-layout.row#homeBannerDeskRow",
       "rich-text#homeTxtShelf1Desk",
       "flex-layout.row#imageshelfdesk",
-      "avantivtexio.ic2-project-2-app:shelftwoitems",
+      "shelftwoitems",
       "__fold__",
       "flex-layout.row#homeBannerDeskRow",
       "rich-text#homeTxtShelf2Desk",

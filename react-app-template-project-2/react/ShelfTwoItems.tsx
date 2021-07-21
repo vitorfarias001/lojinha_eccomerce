@@ -7,14 +7,13 @@ import { useCssHandles } from 'vtex.css-handles'
 import { SliderLayout } from 'vtex.slider-layout'
 
 import { IShelf } from './typings/shelf'
-import logo from './img/Imagem.png'
 import ShelfItem from './components/shelf/ShelfItem'
 
 const CSS_HANDLES = [
   'shelfTwo',
   'shelfContainerTwo',
   'image',
-  'sliderLayoutContainer',
+  'sliderLayoutContainerTwo',
 ]
 
 type ShelfTwoItemsProps = {
@@ -38,7 +37,7 @@ const ShelfTwoItems = ({ discount }: ShelfTwoItemsProps) => {
       <div className={`${handles.shelfContainerTwo}`}>
         <SliderLayout
           itemsPerPage={{ desktop: 2, phone: 2 }}
-          className={`${handles.sliderLayoutContainer}`}
+          className={`${handles.sliderLayoutContainerTwo}`}
         >
           {shelfWoman.map((item) => {
             return (

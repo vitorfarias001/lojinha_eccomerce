@@ -17,6 +17,10 @@
     "getUser": {
       "path": "/_v/getuser/:id",
       "public": true
+    },
+    "getAll": {
+      "path": "/_v/getall",
+      "public": true
     }
   }
 }

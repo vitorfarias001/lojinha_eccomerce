@@ -1,7 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-use-before-define */
-import React from 'react'
+import React, {  useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { Input, Button } from 'vtex.styleguide'
+import axios from 'axios'
+
+import { INewsletter } from '../../service-example-project-2/typings/newsletter'
 
 const CSS_HANDLES = [
   'newsletterContainer',
@@ -17,6 +25,17 @@ const CSS_HANDLES = [
 
 const Newsletter = () => {
   const handles = useCssHandles(CSS_HANDLES)
+  const [email, setEmail] = useState<INewsletter>()
+
+  const handleSendEmail = () => {
+    console.log({email});
+
+    axios.post('/_v/createuser',{ email })
+    .then((response) => {
+      setEmail(response.data.email)
+      console.log(response);
+    })
+  }
 
   return (
     <div className={`${handles.newsletterContainer}`}>
@@ -31,10 +50,10 @@ const Newsletter = () => {
           <Input placeholder="Nome: " />
         </div>
         <div className={`${handles.placeholderEmail}`}>
-          <Input placeholder="Email: " />
+          <Input value={email} onChange={(event: any) => setEmail(event.target.value)} placeholder="Email: " />
         </div>
         <div className={`${handles.buttonContent}`}>
-          <Button variation="primary" size="regular">
+          <Button variation="primary" size="regular" onClick={()=>handleSendEmail()}>
             Adicionar
           </Button>
         </div>
