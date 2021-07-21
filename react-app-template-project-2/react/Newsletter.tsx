@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable prettier/prettier */
@@ -33,7 +34,6 @@ const Newsletter = () => {
     axios.post('/_v/createuser',{ email })
     .then((response) => {
       setEmail(response.data.email)
-      console.log(response);
     })
   }
 
