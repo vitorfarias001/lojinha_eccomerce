@@ -26,6 +26,7 @@
   text-decoration: none;
 
   display: block;
+  width: max-content;
 
   color: #202020;
   font-size: 14px;
@@ -378,7 +379,7 @@
   width: 12px;
   height: 2px;
   background: white;
-  transform: rotate(180deg);
+  transform: rotate(90deg);
   position: absolute;
 }
 

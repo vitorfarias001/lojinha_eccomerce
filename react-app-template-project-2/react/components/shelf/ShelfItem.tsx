@@ -4,6 +4,7 @@ import { Button, Input } from 'vtex.styleguide'
 import { useCssHandles } from 'vtex.css-handles'
 
 import { IShelf } from '../../typings/shelf'
+import AddToCartBtn from './AddToCartBtn'
 
 interface ShelfItemProps {
   item: IShelf
@@ -16,7 +17,6 @@ const CSS_HANDLES = [
   'itemContent',
   'subtitleShelf',
   'subtitleContent',
-  'buttonContainer',
   'countContainer',
   'minimumButton',
   'maximumButton',
@@ -96,19 +96,7 @@ const ShelfItem = ({ item, discount }: ShelfItemProps) => {
           ) : (
             <div className={`${handles.countContainer}`} />
           )}
-          <div
-            className={`${
-              item.items[0].sellers[0].commertialOffer.IsAvailable
-                ? `${handles.buttonContainer}`
-                : `${handles.buttonContainer}--unavailable`
-            }`}
-          >
-            <Button>
-              {item.items[0].sellers[0].commertialOffer.IsAvailable
-                ? 'Adicionar'
-                : 'Indisponível'}
-            </Button>
-          </div>
+          <AddToCartBtn item={item} counter={counter} />
         </div>
       </div>
     </div>
