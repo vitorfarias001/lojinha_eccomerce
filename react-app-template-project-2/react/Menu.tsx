@@ -11,9 +11,10 @@ const CSS_HANDLES = ['menuContainer', 'menuFooterContainer'] as const
 interface MenuProps {
   items: number
   allItems: boolean
+  footer: boolean
 }
 
-const Menu = ({ items, allItems }: MenuProps) => {
+const Menu = ({ items, allItems, footer }: MenuProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [allCategories, setAllCategories] = useState<IDepartment[]>()
   const [categories, setCategories] = useState<IDepartment[]>()
@@ -46,16 +47,12 @@ const Menu = ({ items, allItems }: MenuProps) => {
       {!isLoading && (
         <div
           className={
-            allItems ? handles.menuFooterContainer : handles.menuContainer
+            footer ? handles.menuFooterContainer : handles.menuContainer
           }
         >
           {categories?.map((category) => {
             return (
-              <MenuItem
-                key={category.id}
-                category={category}
-                footer={allItems}
-              />
+              <MenuItem key={category.id} category={category} footer={footer} />
             )
           })}
         </div>
@@ -77,7 +74,13 @@ Menu.schema = {
     },
     allItems: {
       title: 'All items options',
-      description: 'Use true or false',
+      description: '',
+      type: 'boolean',
+      default: false,
+    },
+    footer: {
+      title: 'Determines if the menu is for the footer',
+      description: '',
       type: 'boolean',
       default: false,
     },
