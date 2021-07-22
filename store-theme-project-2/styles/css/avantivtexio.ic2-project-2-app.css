@@ -119,6 +119,7 @@
     flex-direction: column;
     gap: 15px;
     padding-left: 13px;
+    margin-left: 0px;
   }
   .subMenuContainer {
     position: relative;

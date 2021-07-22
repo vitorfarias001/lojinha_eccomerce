@@ -116,8 +116,7 @@
     :nth-child(odd) {
     height: 16px;
     width: 16px;
-    left: calc(50% - 8px);
-    top: calc(50% - 8px);
+    padding: 12px 15px 12px 15px;
   }
 
   .autoCompleteOuterContainer--headerMobile
