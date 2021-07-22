@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { UserInputError } from '@vtex/api'
 
 export async function validate(ctx: Context, next: () => Promise<any>) {

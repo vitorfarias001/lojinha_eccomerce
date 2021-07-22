@@ -12,7 +12,7 @@
     "@vtex/test-tools": "^1.0.0",
     "@vtex/tsconfig": "^0.5.6",
     "typescript": "3.9.7",
-    "vtex.service-example": "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/vtex.service-example@0.2.0+build1626880341/public/_types/react"
+    "vtex.service-example": "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/vtex.service-example@0.2.0+build1626982590/public/_types/react"
   },
   "scripts": {
     "lint": "tsc --noEmit --pretty"

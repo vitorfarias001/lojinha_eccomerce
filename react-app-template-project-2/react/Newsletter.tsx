@@ -34,6 +34,7 @@ const Newsletter = () => {
     axios.post('/_v/createuser',{ email })
     .then((response) => {
       setEmail(response.data.email)
+      console.log(response.data);
     })
   }
 
