@@ -6,13 +6,17 @@ import axios from 'axios'
 import MenuItem from './components/menu/MenuItem'
 import { IDepartment } from './typings/menu'
 
-const CSS_HANDLES = ['menuContainer'] as const
+const CSS_HANDLES = ['menuContainer', 'menuFooterContainer'] as const
 
-const MENU_QUANTITY = 4
+interface MenuProps {
+  items: number
+  allItems: boolean
+  footer: boolean
+}
 
-const Menu = () => {
+const Menu = ({ items, allItems, footer }: MenuProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
-  const [allCategories, setAllCategories] = useState<IDepartment[]>()
+  // const [isDisplaying, setIsDisplaying] = useState<boolean>(false)
   const [categories, setCategories] = useState<IDepartment[]>()
 
   const handles = useCssHandles(CSS_HANDLES)
@@ -21,32 +25,59 @@ const Menu = () => {
     const fetchAllCategories = async () => {
       const data = await axios.get('/api/catalog_system/pub/category/tree/2')
 
-      setAllCategories(data.data)
-      setCategories(data.data.slice(MENU_QUANTITY, data.data.lenght))
+      if (allItems) setCategories(data.data)
+      else setCategories(data.data.slice(items + 1, data.data.lenght))
+      // Slicing the array with the number if there's a quantity setted
       setIsLoading(false)
     }
 
     fetchAllCategories()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  // eslint-disable-next-line no-console
-  console.log('All', allCategories)
-  // eslint-disable-next-line no-console
-  console.log('Sliced', categories)
 
   return (
     <>
       {!isLoading && (
-        <div className={handles.menuContainer}>
+        <div
+          className={
+            footer ? handles.menuFooterContainer : handles.menuContainer
+          }
+        >
           {categories?.map((category) => {
             return (
-              <MenuItem key={category.id} category={category} footer={false} />
+              <MenuItem key={category.id} category={category} footer={footer} />
             )
           })}
         </div>
       )}
     </>
   )
+}
+
+Menu.schema = {
+  title: 'Item Quantity',
+  description: 'Number of items in the dynamic menu',
+  type: 'object',
+  properties: {
+    items: {
+      title: 'Number of the items to appear',
+      description: 'Mind the total number of items',
+      type: 'number',
+      default: 4,
+    },
+    allItems: {
+      title: 'All items options',
+      description: '',
+      type: 'boolean',
+      default: false,
+    },
+    footer: {
+      title: 'Determines if the menu is for the footer',
+      description: '',
+      type: 'boolean',
+      default: false,
+    },
+  },
 }
 
 export default Menu
