@@ -4,7 +4,7 @@
       "orientation": "vertical",
       "blockClass": "categorias"
     },
-    "children": ["menu-item#footerCategoriasTitle", "menu-footer-project-2"]
+    "children": ["menu-item#footerCategoriasTitle", "menu-project-2"]
   },
   "menu-item#footerCategoriasTitle": {
     "props": {

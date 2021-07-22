@@ -6,7 +6,7 @@ import { IDepartment } from '../../typings/menu'
 
 interface SubMenuProps {
   subCategories: IDepartment[]
-  showSub: () => void
+  showSub: (arg0: boolean) => void
 }
 
 const CSS_HANDLES = [
@@ -37,10 +37,26 @@ const SubMenu = ({ subCategories, showSub }: SubMenuProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const closeSubMenuMouseLeaveHandler = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    const menuContainer = document.querySelector(
+      '.avantivtexio-ic2-project-2-app-0-x-menuContainer'
+    ) as HTMLDivElement
+
+    if (menuContainer !== e.relatedTarget) {
+      showSub(false)
+    }
+  }
+
   return (
     <div
       className={handles.subMenuContainer}
-      onMouseLeave={window.innerWidth > 1024 ? () => showSub() : undefined}
+      onMouseLeave={
+        window.innerWidth > 1024
+          ? (e) => closeSubMenuMouseLeaveHandler(e)
+          : undefined
+      }
       onLoad={changeCss}
     >
       <div className={handles.subMenuContent}>
