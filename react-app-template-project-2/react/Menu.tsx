@@ -16,7 +16,7 @@ interface MenuProps {
 
 const Menu = ({ items, allItems, footer }: MenuProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
-  const [allCategories, setAllCategories] = useState<IDepartment[]>()
+  // const [isDisplaying, setIsDisplaying] = useState<boolean>(false)
   const [categories, setCategories] = useState<IDepartment[]>()
 
   const handles = useCssHandles(CSS_HANDLES)
@@ -25,22 +25,15 @@ const Menu = ({ items, allItems, footer }: MenuProps) => {
     const fetchAllCategories = async () => {
       const data = await axios.get('/api/catalog_system/pub/category/tree/2')
 
-      setAllCategories(data.data)
       if (allItems) setCategories(data.data)
       else setCategories(data.data.slice(items + 1, data.data.lenght))
+      // Slicing the array with the number if there's a quantity setted
       setIsLoading(false)
     }
 
     fetchAllCategories()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  // eslint-disable-next-line no-console
-  console.log('All', allCategories)
-  // eslint-disable-next-line no-console
-  console.log('Sliced', categories)
-  // eslint-disable-next-line no-console
-  console.log('Footer', allItems)
 
   return (
     <>

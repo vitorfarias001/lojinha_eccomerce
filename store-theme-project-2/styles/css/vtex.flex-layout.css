@@ -35,6 +35,7 @@
 }
 
 .flexCol--headerDeskMainCol {
+  height: 100px;
   gap: 11px;
 }
 

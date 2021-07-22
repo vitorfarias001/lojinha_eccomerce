@@ -32,12 +32,6 @@ const MenuItem = ({ category, footer }: MenuItemProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const showSub = () => {
-    /*     console.log('Category', category)
-    console.log('Sub', subCategories) */
-    setShowSubMenu(!showSubMenu)
-  }
-
   return (
     <div
       className={
@@ -49,10 +43,18 @@ const MenuItem = ({ category, footer }: MenuItemProps) => {
           role="Link"
           className={footer ? handles.footerCategoryName : handles.categoryName}
           onMouseEnter={
-            footer ? undefined : window.innerWidth > 1024 ? showSub : undefined
+            footer
+              ? undefined
+              : window.innerWidth > 1024
+              ? () => setShowSubMenu(true)
+              : undefined
           }
           onClick={
-            footer ? undefined : window.innerWidth <= 1024 ? showSub : undefined
+            footer
+              ? undefined
+              : window.innerWidth <= 1024
+              ? () => setShowSubMenu(!showSubMenu)
+              : undefined
           }
         >
           {category.name}
@@ -61,13 +63,12 @@ const MenuItem = ({ category, footer }: MenuItemProps) => {
         <a
           className={footer ? handles.footerCategoryName : handles.categoryName}
           href={category.url}
-          onClick={footer ? undefined : showSub}
         >
           {category.name}
         </a>
       )}
       {showSubMenu && (
-        <SubMenu subCategories={subCategories} showSub={showSub} />
+        <SubMenu subCategories={subCategories} showSub={setShowSubMenu} />
       )}
     </div>
   )

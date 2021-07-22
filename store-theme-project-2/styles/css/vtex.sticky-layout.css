@@ -5,7 +5,7 @@
   height: 136px;
 
   display: flex;
-  align-items: center;
+  align-items: end;
 }
 
 .container--headerMobileSticky {
