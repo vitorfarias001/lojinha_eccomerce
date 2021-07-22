@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable padding-line-between-statements */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { MasterData } from '@vtex/api'
 
@@ -14,13 +16,27 @@ export default class Newsletter extends MasterData {
     return resp
   }
 
+  public async getByEmail(email: string): Promise<any> {
+    const resp = await this.searchDocumentsWithPaginationInfo({
+      dataEntity: 'newsletter',
+      fields: ['_all'],
+      // eslint-disable-next-line prefer-template
+      where: 'email=' + email,
+      pagination: {
+        page: 1,
+        pageSize: 800,
+      },
+    })
+
+    return resp
+  }
+
   public async create(userCreate: INewsletter) {
     const resp = await this.createDocument({
       dataEntity: 'newsletter',
       schema: 'vitor',
       fields: userCreate,
     })
-
     return resp
   }
 
