@@ -8,8 +8,8 @@
 import React, {  useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { Input, Button } from 'vtex.styleguide'
-import axios from 'axios'
 
+import  {getByEmail} from '../../service-example-project-2/node/clients/newsletter'
 import { INewsletter } from '../../service-example-project-2/typings/newsletter'
 
 const CSS_HANDLES = [
@@ -29,13 +29,7 @@ const Newsletter = () => {
   const [email, setEmail] = useState<INewsletter>()
 
   const handleSendEmail = () => {
-    console.log({email});
-
-    axios.post('/_v/createuser',{ email })
-    .then((response) => {
-      setEmail(response.data.email)
-      console.log(response.data);
-    })
+    getByEmail()
   }
 
   return (
@@ -50,8 +44,8 @@ const Newsletter = () => {
         <div className={`${handles.placeholderName}`}>
           <Input placeholder="Nome: " />
         </div>
-        <div className={`${handles.placeholderEmail}`}>
-          <Input value={email} onChange={(event: any) => setEmail(event.target.value)} placeholder="Email: " />
+        <div  className={`${handles.placeholderEmail}`}>
+          <Input id="campoEmail" value={email} onChange={(event: any) => setEmail(event.target.value)} placeholder="Email: " />
         </div>
         <div className={`${handles.buttonContent}`}>
           <Button variation="primary" size="regular" onClick={()=>handleSendEmail()}>
