@@ -1,11 +1,8 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable padding-line-between-statements */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { MasterData } from '@vtex/api'
 
 import type { INewsletter } from '../../typings/newsletter'
 
-export default class Newsletter extends MasterData {
+export default class NewsletterForm extends MasterData {
   public async get(id: string): Promise<any> {
     const resp = await this.getDocument({
       dataEntity: 'newsletter',
@@ -16,15 +13,14 @@ export default class Newsletter extends MasterData {
     return resp
   }
 
-  public async getByEmail(email: string): Promise<any> {
-    const resp = await this.searchDocumentsWithPaginationInfo({
+  public async getByDocument(email: string): Promise<any> {
+    const resp = await this.searchDocuments({
       dataEntity: 'newsletter',
       fields: ['_all'],
-      // eslint-disable-next-line prefer-template
-      where: 'email=' + email,
+      where: email,
       pagination: {
         page: 1,
-        pageSize: 800,
+        pageSize: 1,
       },
     })
 
@@ -37,6 +33,7 @@ export default class Newsletter extends MasterData {
       schema: 'vitor',
       fields: userCreate,
     })
+
     return resp
   }
 
@@ -53,4 +50,29 @@ export default class Newsletter extends MasterData {
     // eslint-disable-next-line padding-line-between-statements
     return resp
   }
+}
+
+export function getByEmail(): void {
+  // const campoEmail: HTMLInputElement =
+  //   document.getElementById('campoEmail') ?? null
+  const campoEmail = (document.getElementById('campoEmail') as HTMLInputElement)
+    .value
+
+  const valueEmail: any = campoEmail
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/vnd.vtex.ds.v10+json',
+      'REST-Range': 'resources%3D0-10',
+    },
+  }
+
+  const url = `/api/dataentities/CL/search?_where=email=${valueEmail}`
+
+  fetch(url, options)
+    .then((res) => res.json())
+    .then((json) => console.log(json))
+    .catch((err) => console.error(`error:${err}`))
 }

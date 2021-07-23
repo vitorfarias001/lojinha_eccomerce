@@ -9,7 +9,6 @@ import { LRUCache, method, Service } from '@vtex/api'
 import { Clients } from './clients'
 import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
-import { createUser } from './middlewares/newsletter/createUser'
 import { getUser } from './middlewares/newsletter/getUser'
 import { getAll } from './middlewares/newsletter/getAll'
 const TIMEOUT_MS = 800
@@ -46,7 +45,6 @@ declare global {
     code: number
   }
 }
-console.log(createUser)
 // Export a service that defines route handlers and client options.
 export default new Service({
   clients,
@@ -54,9 +52,6 @@ export default new Service({
     // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
     status: method({
       GET: [validate, status],
-    }),
-    createUser: method({
-      POST: [createUser],
     }),
     getUser: method({
       GET: [getUser],
@@ -66,3 +61,4 @@ export default new Service({
     }),
   },
 })
+// eslint-disable-next-line @typescript-eslint/no-shadow
