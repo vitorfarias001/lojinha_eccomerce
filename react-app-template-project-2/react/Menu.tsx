@@ -5,6 +5,7 @@ import axios from 'axios'
 
 import MenuItem from './components/menu/MenuItem'
 import { IDepartment } from './typings/menu'
+import SubMenu from './components/menu/SubMenu'
 
 const CSS_HANDLES = ['menuContainer', 'menuFooterContainer'] as const
 
@@ -16,8 +17,9 @@ interface MenuProps {
 
 const Menu = ({ items, allItems, footer }: MenuProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
-  // const [isDisplaying, setIsDisplaying] = useState<boolean>(false)
   const [categories, setCategories] = useState<IDepartment[]>()
+  const [subCategories, setSubCategories] = useState<IDepartment[]>([])
+  const [showSubMenu, setShowSubMenu] = useState<boolean>(false)
 
   const handles = useCssHandles(CSS_HANDLES)
 
@@ -26,13 +28,12 @@ const Menu = ({ items, allItems, footer }: MenuProps) => {
       const data = await axios.get('/api/catalog_system/pub/category/tree/2')
 
       if (allItems) setCategories(data.data)
-      else setCategories(data.data.slice(items + 1, data.data.lenght))
+      else setCategories(data.data.slice(data.data.lenght, items))
       // Slicing the array with the number if there's a quantity setted
       setIsLoading(false)
     }
 
     fetchAllCategories()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -45,10 +46,13 @@ const Menu = ({ items, allItems, footer }: MenuProps) => {
         >
           {categories?.map((category) => {
             return (
-              <MenuItem key={category.id} category={category} footer={footer} />
+              <MenuItem key={category.id} category={category} setShowSubMenu={setShowSubMenu} setSubCategories={setSubCategories} footer={footer} />
             )
           })}
         </div>
+      )}
+      {showSubMenu && (
+        <SubMenu subCategories={subCategories} showSub={setShowSubMenu} />
       )}
     </>
   )
