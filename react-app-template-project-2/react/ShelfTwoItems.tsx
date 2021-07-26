@@ -1,6 +1,4 @@
 /* eslint-disable react/jsx-key */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable no-use-before-define */
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useCssHandles } from 'vtex.css-handles'

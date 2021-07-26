@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-use-before-define
 import React, { useEffect } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 
@@ -34,8 +33,7 @@ const SubMenu = ({ subCategories, showSub }: SubMenuProps) => {
 
   useEffect(() => {
     changeCss()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  })
 
   const closeSubMenuMouseLeaveHandler = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>

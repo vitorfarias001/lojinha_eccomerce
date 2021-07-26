@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-use-before-define
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useCssHandles } from 'vtex.css-handles'

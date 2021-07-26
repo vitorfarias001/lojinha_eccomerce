@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-use-before-define
 import React, { useState } from 'react'
 import { Button, Input } from 'vtex.styleguide'
 import { useCssHandles } from 'vtex.css-handles'
