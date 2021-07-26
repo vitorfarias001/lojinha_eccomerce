@@ -5,12 +5,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-use-before-define */
-import React, {  useState } from 'react'
+import React/* , {  useState } */ from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { Input, Button } from 'vtex.styleguide'
 
-import  {getByEmail} from '../../service-example-project-2/node/clients/newsletter'
-import { INewsletter } from '../../service-example-project-2/typings/newsletter'
+/* import  {getByEmail} from '../../service-example-project-2/node/clients/newsletter'
+import { INewsletter } from '../../service-example-project-2/typings/newsletter' */
 
 const CSS_HANDLES = [
   'newsletterContainer',
@@ -26,11 +26,11 @@ const CSS_HANDLES = [
 
 const Newsletter = () => {
   const handles = useCssHandles(CSS_HANDLES)
-  const [email, setEmail] = useState<INewsletter>()
+/*   const [email, setEmail] = useState<INewsletter>() */
 
   const handleSendEmail = () => {
-    getByEmail()
-  }
+/*     getByEmail()
+ */  }
 
   return (
     <div className={`${handles.newsletterContainer}`}>
@@ -45,7 +45,7 @@ const Newsletter = () => {
           <Input placeholder="Nome: " />
         </div>
         <div  className={`${handles.placeholderEmail}`}>
-          <Input id="campoEmail" value={email} onChange={(event: any) => setEmail(event.target.value)} placeholder="Email: " />
+          <Input id="campoEmail" value={""/* email */} onChange={""/* (event: any) => setEmail(event.target.value) */} placeholder="Email: " />
         </div>
         <div className={`${handles.buttonContent}`}>
           <Button variation="primary" size="regular" onClick={()=>handleSendEmail()}>
