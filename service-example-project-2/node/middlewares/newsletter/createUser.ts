@@ -1,4 +1,3 @@
-/* eslint-disable vtex/prefer-early-return */
 export async function createUser(ctx: Context, next: () => Promise<any>) {
   const {
     clients: { newsletter: Newsletter },
