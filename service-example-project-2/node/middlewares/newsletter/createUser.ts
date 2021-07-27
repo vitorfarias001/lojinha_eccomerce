@@ -14,7 +14,7 @@ export async function createUser(ctx: Context, next: () => Promise<any>) {
 
     console.log('ValueName====>', valueName)
     console.log('ValueEmail====>', valueEmail)
-
+    console.log(next)
     const resp = await Newsletter.create({ name: valueName, email: valueEmail })
 
     ctx.status = 200
