@@ -1,7 +1,3 @@
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/aria-role */
-// eslint-disable-next-line no-use-before-define
 import React, { useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 
@@ -11,8 +7,8 @@ import SubMenu from './SubMenu'
 interface MenuItemProps {
   category: IDepartment
   footer: boolean
-  setShowSubMenu: (arg0:boolean) => void
-  setSubCategories: (arg0:IDepartment[]) => void
+  setShowSubMenu: (arg0: boolean) => void
+  setSubCategories: (arg0: IDepartment[]) => void
 }
 
 const CSS_HANDLES = [
@@ -23,7 +19,12 @@ const CSS_HANDLES = [
   'footerCategoryName',
 ] as const
 
-const MenuItem = ({ category, footer, setSubCategories, setShowSubMenu }: MenuItemProps) => {
+const MenuItem = ({
+  category,
+  footer,
+  setSubCategories,
+  setShowSubMenu,
+}: MenuItemProps) => {
   const handles = useCssHandles(CSS_HANDLES)
 
   const [showSubMenuDrawer, setShowSubMenuDrawer] = useState<boolean>(false)
@@ -43,9 +44,9 @@ const MenuItem = ({ category, footer, setSubCategories, setShowSubMenu }: MenuIt
               ? undefined
               : window.innerWidth > 1024
               ? () => {
-                setShowSubMenu(true)
-                setSubCategories(category.children)
-              }
+                  setShowSubMenu(true)
+                  setSubCategories(category.children)
+                }
               : undefined
           }
           onClick={
@@ -53,8 +54,8 @@ const MenuItem = ({ category, footer, setSubCategories, setShowSubMenu }: MenuIt
               ? undefined
               : window.innerWidth <= 1024
               ? () => {
-                setShowSubMenuDrawer(!showSubMenuDrawer)
-              }
+                  setShowSubMenuDrawer(!showSubMenuDrawer)
+                }
               : undefined
           }
         >

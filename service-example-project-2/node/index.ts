@@ -11,6 +11,7 @@ import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
 import { getUser } from './middlewares/newsletter/getUser'
 import { getAll } from './middlewares/newsletter/getAll'
+import { createUser } from './middlewares/newsletter/createUser'
 const TIMEOUT_MS = 800
 
 // Create a LRU memory cache for the Status client.
@@ -58,6 +59,9 @@ export default new Service({
     }),
     getAll: method({
       GET: [getAll],
+    }),
+    createUser: method({
+      POST: [createUser],
     }),
   },
 })

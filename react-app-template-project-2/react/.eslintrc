@@ -1,13 +1,12 @@
 {
   "extends": "vtex-react/io",
   "rules": {
-    "no-use-before-define": [
-      "error",
-      {
-        "functions": false,
-        "classes": false,
-        "variables": false
-      }
-    ]
+    "no-use-before-define": "off",
+    "jsx-a11y/alt-text": "off",
+    "jsx-a11y/aria-role":"off",
+    "jsx-a11y/click-events-have-key-events":"off",
+    "jsx-a11y/interactive-supports-focus":"off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-explicit-any": ["off"]
   }
 }

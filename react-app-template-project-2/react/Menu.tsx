@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-use-before-define
 import React, { useEffect, useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import axios from 'axios'
@@ -34,7 +33,7 @@ const Menu = ({ items, allItems, footer }: MenuProps) => {
     }
 
     fetchAllCategories()
-  }, [])
+  })
 
   return (
     <>
@@ -46,7 +45,13 @@ const Menu = ({ items, allItems, footer }: MenuProps) => {
         >
           {categories?.map((category) => {
             return (
-              <MenuItem key={category.id} category={category} setShowSubMenu={setShowSubMenu} setSubCategories={setSubCategories} footer={footer} />
+              <MenuItem
+                key={category.id}
+                category={category}
+                setShowSubMenu={setShowSubMenu}
+                setSubCategories={setSubCategories}
+                footer={footer}
+              />
             )
           })}
         </div>

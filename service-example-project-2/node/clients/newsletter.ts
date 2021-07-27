@@ -52,13 +52,13 @@ export default class NewsletterForm extends MasterData {
   }
 }
 
-export function getByEmail(): void {
+export function getByEmail(email: string): void {
   // const campoEmail: HTMLInputElement =
   //   document.getElementById('campoEmail') ?? null
-  const campoEmail = (document.getElementById('campoEmail') as HTMLInputElement)
-    .value
+  // const campoEmail = (document.getElementById('campoEmail') as HTMLInputElement)
+  //   .value
 
-  const valueEmail: any = campoEmail
+  // const valueEmail: any = campoEmail
 
   const options = {
     method: 'GET',
@@ -69,7 +69,7 @@ export function getByEmail(): void {
     },
   }
 
-  const url = `/api/dataentities/CL/search?_where=email=${valueEmail}`
+  const url = `/api/dataentities/CL/search?_where=email=${email}`
 
   fetch(url, options)
     .then((res) => res.json())
