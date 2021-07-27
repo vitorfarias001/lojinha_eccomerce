@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 
 import { IDepartment } from '../../typings/menu'
@@ -7,6 +7,8 @@ import SubMenu from './SubMenu'
 interface MenuItemProps {
   category: IDepartment
   footer: boolean
+  setShowSubMenu: (arg0: boolean) => void
+  setSubCategories: (arg0: IDepartment[]) => void
 }
 
 const CSS_HANDLES = [
@@ -17,16 +19,15 @@ const CSS_HANDLES = [
   'footerCategoryName',
 ] as const
 
-const MenuItem = ({ category, footer }: MenuItemProps) => {
+const MenuItem = ({
+  category,
+  footer,
+  setSubCategories,
+  setShowSubMenu,
+}: MenuItemProps) => {
   const handles = useCssHandles(CSS_HANDLES)
 
-  const [showSubMenu, setShowSubMenu] = useState<boolean>(false)
-  const [subCategories, setSubCategories] = useState<IDepartment[]>([])
-
-  useEffect(() => {
-    if (category.hasChildren) setSubCategories(category.children)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const [showSubMenuDrawer, setShowSubMenuDrawer] = useState<boolean>(false)
 
   return (
     <div
@@ -42,14 +43,19 @@ const MenuItem = ({ category, footer }: MenuItemProps) => {
             footer
               ? undefined
               : window.innerWidth > 1024
-              ? () => setShowSubMenu(true)
+              ? () => {
+                  setShowSubMenu(true)
+                  setSubCategories(category.children)
+                }
               : undefined
           }
           onClick={
             footer
               ? undefined
               : window.innerWidth <= 1024
-              ? () => setShowSubMenu(!showSubMenu)
+              ? () => {
+                  setShowSubMenuDrawer(!showSubMenuDrawer)
+                }
               : undefined
           }
         >
@@ -63,8 +69,8 @@ const MenuItem = ({ category, footer }: MenuItemProps) => {
           {category.name}
         </a>
       )}
-      {showSubMenu && (
-        <SubMenu subCategories={subCategories} showSub={setShowSubMenu} />
+      {showSubMenuDrawer && (
+        <SubMenu subCategories={category.children} showSub={setShowSubMenu} />
       )}
     </div>
   )

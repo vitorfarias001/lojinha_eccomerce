@@ -19,7 +19,7 @@
     "@vtex/test-tools": "^3.3.2",
     "@vtex/tsconfig": "^0.4.4",
     "apollo-cache-inmemory": "^1.6.5",
-    "avantivtexio.ic2-project-2-app": "https://ic2project2--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1627068597/public/@types/avantivtexio.ic2-project-2-app",
+    "avantivtexio.ic2-project-2-app": "https://ic2projectrodrigo--avantivtexio.myvtex.com/_v/private/typings/linked/v1/avantivtexio.ic2-project-2-app@0.1.0+build1627159084/public/@types/avantivtexio.ic2-project-2-app",
     "graphql": "^14.6.0",
     "typescript": "3.9.7",
     "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.4/public/@types/vtex.css-handles",
