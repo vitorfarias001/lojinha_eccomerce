@@ -10,8 +10,8 @@ Este projeto consiste em mostrar uma loja (e-commerce) , desenvolvido durante o 
 
 Demonstração do Projeto.
 # [![Imgur Image](https://i.imgur.com/Kmi1Vtp.png)
-# [![Imgur Gif]](https://i.imgur.com/2w0jurU.gif)
-# [![Imgur Video](https://imgur.com/XkgCM8V)>
+# <img src="https://i.imgur.com/2w0jurU.gif" width="40" height="40" />
+# [![Watch the video](https://imgur.com/XkgCM8V)
 
 
 ## 🎯 Objetivo do projeto
