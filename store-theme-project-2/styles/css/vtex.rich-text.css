@@ -50,3 +50,31 @@
 .paragraph--footerMobile {
   width: 374px;
 }
+
+
+/*---TITLE NEWSLETTER--*/
+
+.container--Title-Newsletter, .container--SubTitle-Newsletter{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  justify-content: end;
+}
+.paragraph--SubTitle-Newsletter, .paragraph--Title-Newsletter{
+  line-height: 1;
+  margin: 0;
+}
+.wrapper--Title-Newsletter{
+  color: #1B4D9B;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.wrapper--SubTitle-Newsletter{
+  color: #202020;
+  font-size: 14px;
+}
+@media(max-width:414px){
+  .container--Title-Newsletter, .container--SubTitle-Newsletter{
+    grid-column-end: 2;
+  }
+}
