@@ -1,0 +1,48 @@
+.newsletterForm{
+  width: 908px !important;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 42px 12px;
+  gap: 0 12px;
+}
+
+.nameInputContainer{
+  grid-column-start: 6;
+  grid-column-end: 9;
+}
+.emailInputContainer{
+  grid-column-start: 9;
+  grid-column-end: 12;
+}
+
+.formSubmitContainer{
+  grid-column-start: 12
+}
+.formSubmitContainer :global(.vtex-button){
+  font-weight: bold;
+  font-size: 18px;
+}
+.emailInputContainer--input-newsletter--invalid :global(.vtex-input__error){
+  width: 210px;
+}
+
+@media(max-width:414px){
+  .newsletterForm{
+    grid-template-columns: 100%;
+    gap: 12px 0;
+  }
+  .nameInputContainer, .emailInputContainer, .formSubmitContainer{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    justify-content: center;
+  }
+  .formSubmitContainer :global(.vtex-button){
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .emailInputContainer--input-newsletter--invalid :global(.vtex-input__error){
+    position: relative;
+    left: 100px;
+  }
+}

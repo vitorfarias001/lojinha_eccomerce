@@ -15,7 +15,8 @@
       "flex-layout.row#homeBannerDeskRow",
       "rich-text#homeTxtShelf2Desk",
       "avantivtexio.ic2-project-2-app:shelf",
-      "newsletter-project-2"
+      "rich-text#midle-title",
+      "flex-layout.row#newsletter"
     ]
   },
   "flex-layout.row#homeBannerDeskRow": {
@@ -112,7 +113,7 @@
       "flex-layout.row#homeBanner2MobileRow",
       "rich-text#homeTxtShelf2Desk",
       "avantivtexio.ic2-project-2-app:shelf",
-      "newsletter-project-2"
+      "flex-layout.row#newsletter"
     ]
   },
   "flex-layout.row#homeBannerMobileRow": {
@@ -131,6 +132,103 @@
     "props": {
       "blockClass": "homeBanner2Mobile",
       "src": "assets/images/Grupo 6075.png"
+    }
+  },
+  "newsletter": {
+    "props": {
+      "label": "RECEBA NOSSAS NOVIDADES:",
+      "placeholder": "Digite seu e-mail",
+      "submit": "ADICIONAR"
+    }
+  },
+  "flex-layout.row#newsletter": {
+    "props": {
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "blockClass": "newsletter"
+    },
+    "children": [
+      "newsletter-form"
+    ]
+  },
+  "newsletter-form": {
+    "children": [
+      "rich-text#newsletter",
+      "rich-text#newsletter-sub-title",
+      "newsletter-input-name",
+      "newsletter-input-email",
+      "newsletter-submit"
+    ],
+    "props": {
+      "blockClass": "newsletter-form",
+      "SuccessState": "flex-layout.col#newsletter-success"
+    }
+  },
+  "flex-layout.col#newsletter-success": {
+    "props": {
+      "blockClass": "col-newsletter-success"
+    },
+    "children": [
+      "rich-text#success-newsletter-title",
+      "rich-text#success-newsletter"
+    ]
+  },
+  "rich-text#midle-title": {
+    "props": {
+      "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, expedita! Neque, saepe. Doloribus quam, dolores, nemo, quae alias deserunt cumque pariatur dolore adipisci ullam repudiandae voluptatibus sed fugit sapiente architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, expedita! Neque, saepe. Doloribus quam, dolores, nemo, quae alias deserunt cumque pariatur dolore adipisci ullam repudiandae voluptatibus sed fugit sapiente architecto!",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass":"Midle-Title"
+    }
+  },
+  "rich-text#success-newsletter-title": {
+    "props": {
+      "text": "## OBRIGADA!",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#newsletter": {
+    "props": {
+      "text": "NEWSLETTER",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass":"Title-Newsletter"
+    }
+  },
+  "rich-text#newsletter-sub-title": {
+    "props": {
+      "text": "cadastra-se e receba nossas novidades",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass":"SubTitle-Newsletter"
+    }
+  },
+  "newsletter-input-name": {
+    "props": {
+      "placeholderText": "Nome",
+      "errorMessage": "Por favor, use um e-mail válido",
+      "blockClass": "input-newsletter"
+    }
+  },
+  "newsletter-input-email": {
+    "props": {
+      "placeholderText": "Email",
+      "errorMessage": "Por favor, use um e-mail válido",
+      "blockClass": "input-newsletter"
+    }
+  },
+  "rich-text#success-newsletter": {
+    "props": {
+      "text": "Seu e-mail foi cadastrado com sucesso.",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "newsletter-submit": {
+    "props": {
+      "submitButtonLabel": "ADICIONAR",
+      "blockClass": "submit-newsletter"
     }
   }
 }

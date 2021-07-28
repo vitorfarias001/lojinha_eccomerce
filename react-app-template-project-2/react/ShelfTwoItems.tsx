@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useCssHandles } from 'vtex.css-handles'
