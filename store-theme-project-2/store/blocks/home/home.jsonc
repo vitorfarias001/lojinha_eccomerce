@@ -15,6 +15,7 @@
       "flex-layout.row#homeBannerDeskRow",
       "rich-text#homeTxtShelf2Desk",
       "avantivtexio.ic2-project-2-app:shelf",
+      "rich-text#midle-title",
       "flex-layout.row#newsletter"
     ]
   },
@@ -171,6 +172,14 @@
       "rich-text#success-newsletter-title",
       "rich-text#success-newsletter"
     ]
+  },
+  "rich-text#midle-title": {
+    "props": {
+      "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, expedita! Neque, saepe. Doloribus quam, dolores, nemo, quae alias deserunt cumque pariatur dolore adipisci ullam repudiandae voluptatibus sed fugit sapiente architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, expedita! Neque, saepe. Doloribus quam, dolores, nemo, quae alias deserunt cumque pariatur dolore adipisci ullam repudiandae voluptatibus sed fugit sapiente architecto!",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass":"Midle-Title"
+    }
   },
   "rich-text#success-newsletter-title": {
     "props": {

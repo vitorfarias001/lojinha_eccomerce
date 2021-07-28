@@ -73,6 +73,15 @@
   color: #202020;
   font-size: 14px;
 }
+.container--Midle-Title{
+  display: flex;
+  justify-content: center;
+}
+.wrapper--Midle-Title{
+  display: flex;
+  width: 864px;
+  margin-top: 61px;
+}
 @media(max-width:414px){
   .container--Title-Newsletter, .container--SubTitle-Newsletter{
     grid-column-end: 2;
