@@ -9,9 +9,9 @@ Este projeto consiste em mostrar uma loja (e-commerce) , desenvolvido durante o 
 ## ✨ Demonstração
 
 Demonstração do Projeto.
-[![Imgur Image](https://i.imgur.com/Kmi1Vtp.png)
-# <img alt="YAP" src="https://i.imgur.com/2w0jurU.gif">
-# <img alt="YAP" src="https://imgur.com/XkgCM8V">
+# [![Imgur Image](https://i.imgur.com/Kmi1Vtp.png)
+# [![Imgur Gif]](https://i.imgur.com/2w0jurU.gif)
+# [![Imgur Video](https://imgur.com/XkgCM8V)>
 
 
 ## 🎯 Objetivo do projeto
