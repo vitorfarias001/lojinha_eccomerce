@@ -32,6 +32,25 @@
   padding: 5px;
   cursor: pointer;
 }
+.categoryName{
+  position: relative;
+}
+
+.categoryName::before{
+  position: absolute;
+  content:none;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border: 7px solid transparent;
+  border-bottom-color: #5B6D62;
+}
+
+.categoryName:hover::before{
+  content: "";
+}
+
+
 
 .footerCategoryName {
   text-decoration: none;

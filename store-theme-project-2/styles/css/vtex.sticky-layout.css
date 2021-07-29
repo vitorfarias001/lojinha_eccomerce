@@ -19,3 +19,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.wrapper {
+  position: relative;
+  top: 13.5px;
+}
